@@ -32,15 +32,13 @@ import {
   faCheck,
   faArrowRight,
   faRotateLeft,
-
   faLocationDot,
-
-  faShieldAlt, faPhone,
-
+  faShieldAlt,
+  faPhone,
   faHandshake,
   faDollarSign,
   faShield,
-  faMap
+  faMap,
 } from "@fortawesome/free-solid-svg-icons";
 
 import NotificationModal from "./modals/NotificationModal";
@@ -367,7 +365,7 @@ export default function HomePage({
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
-                className="w-full py-20 bg-white"
+                className="w-full py-20 "
               >
                 <div className="max-w-7xl mx-auto px-6 text-center">
                   <h2 className="text-4xl font-bold mb-6">
@@ -629,16 +627,147 @@ export default function HomePage({
 
                 <div className="flex flex-col sm:flex-row gap-4 mt-6">
                   {/* Start Escrow Transaction */}
-                  <button className="flex items-center justify-center gap-2 bg-green-500 hover:bg-green-600 transition text-white font-semibold px-6 py-3 rounded-lg">
+                  <button className="cursor-pointer flex items-center justify-center gap-2 bg-green-500 hover:bg-green-600 transition text-white font-semibold px-6 py-3 rounded-lg">
                     Start Escrow Transaction
                     <FontAwesomeIcon icon={faShieldAlt} />
                   </button>
 
                   {/* Contact Sales */}
-                  <button className="flex items-center justify-center gap-2 bg-gray-800 hover:bg-gray-700 transition text-white font-semibold px-6 py-3 rounded-lg">
+                  <button className="cursor-pointer flex items-center justify-center gap-2 bg-gray-800 hover:bg-gray-700 transition text-white font-semibold px-6 py-3 rounded-lg">
                     Contact Sales
                     <FontAwesomeIcon icon={faPhone} />
                   </button>
+                </div>
+              </motion.div>
+
+              {/* Nearby Farmers */}
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+                className="w-full py-20 "
+              >
+                <div className="max-w-7xl mx-auto px-6">
+                  <h2 className="text-4xl font-bold mb-6 text-center">
+                    Find Nearby Farmers,{" "}
+                    <span className="text-theme">Get Delivery in 24 Hours</span>
+                  </h2>
+
+                  <p className="text-gray-600 max-w-2xl mx-auto mb-12 text-center">
+                    Our smart geolocation technology automatically connects you
+                    with the nearest farmers for fresh produce delivered fast.
+                  </p>
+
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div className="bg-gray-50 p-8 rounded-xl shadow hover:shadow-lg transition">
+                      <div className="bg-softTheme w-14 h-14 flex items-center justify-center rounded-lg mx-auto mb-4">
+                        <FontAwesomeIcon
+                          icon={faHandshake}
+                          className="text-theme text-2xl"
+                        />
+                      </div>
+                      <h3 className="text-xl font-semibold mb-2">
+                        Enter Your Location
+                      </h3>
+                      <p className="text-gray-600">
+                        Simply enter your delivery address or enable location
+                        services. Our system instantly maps your position.
+                      </p>
+                      <div className="mt-2">
+                        <div className="flex items-center gap-2">
+                          <div className="bg-theme rounded-full p-1 w-5 h-5 flex justify-center items-center">
+                            <FontAwesomeIcon
+                              icon={faCheck}
+                              className="text-white text-xs"
+                            />
+                          </div>
+                          <p className="text-gray-600">Auto-detect current location</p>
+                        </div>
+                        <div className="flex items-center mt-2 gap-2">
+                          <div className="bg-theme rounded-full p-1 w-5 h-5 flex justify-center items-center">
+                            <FontAwesomeIcon
+                              icon={faCheck}
+                              className="text-white text-xs"
+                            />
+                          </div>
+                          <p className="text-gray-600">Save multiple addresses</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="bg-gray-50 p-8 rounded-xl shadow hover:shadow-lg transition">
+                      <div className="bg-softTheme w-14 h-14 flex items-center justify-center rounded-lg mx-auto mb-4">
+                        <FontAwesomeIcon
+                          icon={faClock}
+                          className="text-theme text-2xl"
+                        />
+                      </div>
+                      <h3 className="text-xl font-semibold mb-2">
+                        We Find Nearby Farmers
+                      </h3>
+                      <p className="text-gray-600">
+                        Our smart algorithm scans our network of verified
+                        farmers and finds those closest to your location.
+                      </p>
+                      <div className="mt-2">
+                        <div className="flex items-center gap-2">
+                          <div className="bg-theme rounded-full p-1 w-5 h-5 flex justify-center items-center">
+                            <FontAwesomeIcon
+                              icon={faCheck}
+                              className="text-white text-xs"
+                            />
+                          </div>
+                          <p className="text-gray-600">Verified local farmers</p>
+                        </div>
+                        <div className="flex items-center mt-2 gap-2">
+                          <div className="bg-theme rounded-full p-1 w-5 h-5 flex justify-center items-center">
+                            <FontAwesomeIcon
+                              icon={faCheck}
+                              className="text-white text-xs"
+                            />
+                          </div>
+                          <p className="text-gray-600">Freshest produce nearby</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="bg-gray-50 p-8 rounded-xl shadow hover:shadow-lg transition">
+                      <div className="bg-softTheme w-14 h-14 flex items-center justify-center rounded-lg mx-auto mb-4">
+                        <FontAwesomeIcon
+                          icon={faDollarSign}
+                          className="text-theme text-2xl"
+                        />
+                      </div>
+                      <h3 className="text-xl font-semibold mb-2">
+                        24-Hour Local Delivery
+                      </h3>
+                      <p className="text-gray-600">
+                        Because farmers are nearby, your fresh produce is
+                        delivered within 24 hours of ordering.
+                      </p>
+                      <div className="mt-2">
+                        <div className="flex items-center gap-2">
+                          <div className="bg-theme rounded-full p-1 w-5 h-5 flex justify-center items-center">
+                            <FontAwesomeIcon
+                              icon={faCheck}
+                              className="text-white text-xs"
+                            />
+                          </div>
+                          <p className="text-gray-600">Delivery within 24 hours</p>
+                        </div>
+                        <div className="flex items-center mt-2 gap-2">
+                          <div className="bg-theme rounded-full p-1 w-5 h-5 flex justify-center items-center">
+                            <FontAwesomeIcon
+                              icon={faCheck}
+                              className="text-white text-xs"
+                            />
+                          </div>
+                          <p className="text-gray-600">Reduced carbon footprint</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </motion.div>
 
@@ -666,8 +795,8 @@ export default function HomePage({
 
                         <div className="p-4">
                           <h3 className="font-semibold">Product Name</h3>
-                          <div className="flex gap-1 items-center mt-1">
-                            <FontAwesomeIcon icon={faLocationDot} />
+                          <div className="flex gap-1 items-center mt-1 -ml-1">
+                            <FontAwesomeIcon icon={faLocationDot} className="text-theme"/>
                             <p className="text-sm text-gray-600">Farmer Name</p>
                           </div>
 
@@ -680,8 +809,6 @@ export default function HomePage({
                   </div>
                 </div>
               </motion.div>
-
-              
 
               {/* How it works */}
               <section className="py-20 bg-white">
@@ -746,8 +873,6 @@ export default function HomePage({
                   </div>
                 </div>
               </motion.div>
-
-
             </div>
           </div>
         </div>

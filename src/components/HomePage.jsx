@@ -33,7 +33,14 @@ import {
   faArrowRight,
   faRotateLeft,
 
-  faShieldAlt, faPhone
+  faLocationDot,
+
+  faShieldAlt, faPhone,
+
+  faHandshake,
+  faDollarSign,
+  faShield,
+  faMap
 } from "@fortawesome/free-solid-svg-icons";
 
 import NotificationModal from "./modals/NotificationModal";
@@ -377,7 +384,7 @@ export default function HomePage({
                     <div className="bg-gray-50 p-8 rounded-xl shadow hover:shadow-lg transition">
                       <div className="bg-softTheme w-14 h-14 flex items-center justify-center rounded-lg mx-auto mb-4">
                         <FontAwesomeIcon
-                          icon={faCheck}
+                          icon={faHandshake}
                           className="text-theme text-2xl"
                         />
                       </div>
@@ -393,7 +400,7 @@ export default function HomePage({
                     <div className="bg-gray-50 p-8 rounded-xl shadow hover:shadow-lg transition">
                       <div className="bg-softTheme w-14 h-14 flex items-center justify-center rounded-lg mx-auto mb-4">
                         <FontAwesomeIcon
-                          icon={faCheck}
+                          icon={faClock}
                           className="text-theme text-2xl"
                         />
                       </div>
@@ -408,7 +415,7 @@ export default function HomePage({
                     <div className="bg-gray-50 p-8 rounded-xl shadow hover:shadow-lg transition">
                       <div className="bg-softTheme w-14 h-14 flex items-center justify-center rounded-lg mx-auto mb-4">
                         <FontAwesomeIcon
-                          icon={faCheck}
+                          icon={faDollarSign}
                           className="text-theme text-2xl"
                         />
                       </div>
@@ -423,7 +430,7 @@ export default function HomePage({
                     <div className="bg-gray-50 p-8 rounded-xl shadow hover:shadow-lg transition">
                       <div className="bg-softTheme w-14 h-14 flex items-center justify-center rounded-lg mx-auto mb-4">
                         <FontAwesomeIcon
-                          icon={faCheck}
+                          icon={faShield}
                           className="text-theme text-2xl"
                         />
                       </div>
@@ -439,7 +446,7 @@ export default function HomePage({
                     <div className="bg-gray-50 p-8 rounded-xl shadow hover:shadow-lg transition">
                       <div className="bg-softTheme w-14 h-14 flex items-center justify-center rounded-lg mx-auto mb-4">
                         <FontAwesomeIcon
-                          icon={faCheck}
+                          icon={faMap}
                           className="text-theme text-2xl"
                         />
                       </div>
@@ -659,7 +666,10 @@ export default function HomePage({
 
                         <div className="p-4">
                           <h3 className="font-semibold">Product Name</h3>
-                          <p className="text-sm text-gray-600">Farmer Name</p>
+                          <div className="flex gap-1 items-center mt-1">
+                            <FontAwesomeIcon icon={faLocationDot} />
+                            <p className="text-sm text-gray-600">Farmer Name</p>
+                          </div>
 
                           <div className="mt-3 text-theme font-bold">
                             ₦ Price
@@ -705,7 +715,7 @@ export default function HomePage({
                 </div>
               </section>
 
-              {/* TMF IMPACT STATS */}
+              {/* DGF IMPACT STATS */}
               <motion.div
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -737,61 +747,7 @@ export default function HomePage({
                 </div>
               </motion.div>
 
-              {/* TMF CTA SECTION*/}
-              <motion.div
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.7 }}
-                className="w-full mt-0 px-6 md:px-20 lg:px-32 pb-8"
-              >
-                <div className="relative bg-white rounded-2xl shadow-xl p-8 md:p-12 overflow-hidden">
-                  {/* Soft background glow */}
-                  <div
-                    className="absolute inset-0 opacity-10"
-                    style={{
-                      background:
-                        "radial-gradient(circle at center, #EBEA1C 0%, transparent 70%)",
-                    }}
-                  ></div>
 
-                  <div className="relative z-10 text-center">
-                    <h2 className="text-4xl font-bold text-black mb-6">
-                      DiGiFaMaR <span className="text-theme">Title</span>
-                    </h2>
-
-                    <p className="text-lg text-gray-700 max-w-3xl mx-auto mb-8">
-                      At DiGiFaMaR, .
-                    </p>
-
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                      <div
-                        onClick={() => navigate("/about-us")}
-                        className="cursor-pointer px-6 py-3 bg-theme text-white font-semibold rounded-lg 
-                        hover:text-white hover:bg-softTheme transition duration-300 ease-in-out"
-                      >
-                        About Us
-                      </div>
-
-                      <div
-                        onClick={() => navigate("/create-user-with-email")}
-                        className="cursor-pointer px-6 py-3 border-2 border-theme text-theme font-semibold rounded-lg 
-                        hover:text-white hover:bg-softTheme transition duration-300 ease-in-out"
-                      >
-                        Create User Account
-                      </div>
-
-                      <div
-                        onClick={() => navigate("/create-farmer-with-email")}
-                        className="cursor-pointer px-6 py-3 border-2 border-theme text-theme font-semibold rounded-lg 
-                        hover:text-white hover:bg-softTheme transition duration-300 ease-in-out"
-                      >
-                        Create Farmer Account
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
             </div>
           </div>
         </div>

@@ -367,20 +367,20 @@ export default function HomePage({
                 transition={{ duration: 0.6 }}
                 className="w-full py-20 "
               >
-                <div className="max-w-7xl mx-auto px-6 text-center">
-                  <h2 className="text-4xl font-bold mb-6">
-                    Why <span className="text-theme">DiGiFaMaR</span>?
+                <div className="max-w-7xl mx-auto px-6 ">
+                  <h2 className="text-4xl font-bold mb-6 text-center">
+                    Why Choose <span className="text-theme">DiGiFaMaR</span>?
                   </h2>
 
-                  <p className="text-gray-600 max-w-2xl mx-auto mb-12">
+                  <p className="text-gray-600 max-w-2xl mx-auto mb-12 text-center">
                     A digital marketplace designed to connect farmers directly
                     with buyers while ensuring transparency and secure
-                    transactions.
+                    transactions across America.
                   </p>
 
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     <div className="bg-gray-50 p-8 rounded-xl shadow hover:shadow-lg transition">
-                      <div className="bg-softTheme w-14 h-14 flex items-center justify-center rounded-lg mx-auto mb-4">
+                      <div className="bg-softTheme w-14 h-14 flex items-center justify-center rounded-lg  mb-4">
                         <FontAwesomeIcon
                           icon={faHandshake}
                           className="text-theme text-2xl"
@@ -396,7 +396,7 @@ export default function HomePage({
                     </div>
 
                     <div className="bg-gray-50 p-8 rounded-xl shadow hover:shadow-lg transition">
-                      <div className="bg-softTheme w-14 h-14 flex items-center justify-center rounded-lg mx-auto mb-4">
+                      <div className="bg-softTheme w-14 h-14 flex items-center justify-center rounded-lg  mb-4">
                         <FontAwesomeIcon
                           icon={faClock}
                           className="text-theme text-2xl"
@@ -411,7 +411,7 @@ export default function HomePage({
                     </div>
 
                     <div className="bg-gray-50 p-8 rounded-xl shadow hover:shadow-lg transition">
-                      <div className="bg-softTheme w-14 h-14 flex items-center justify-center rounded-lg mx-auto mb-4">
+                      <div className="bg-softTheme w-14 h-14 flex items-center justify-center rounded-lg  mb-4">
                         <FontAwesomeIcon
                           icon={faDollarSign}
                           className="text-theme text-2xl"
@@ -426,7 +426,7 @@ export default function HomePage({
                     </div>
 
                     <div className="bg-gray-50 p-8 rounded-xl shadow hover:shadow-lg transition">
-                      <div className="bg-softTheme w-14 h-14 flex items-center justify-center rounded-lg mx-auto mb-4">
+                      <div className="bg-softTheme w-14 h-14 flex items-center justify-center rounded-lg  mb-4">
                         <FontAwesomeIcon
                           icon={faShield}
                           className="text-theme text-2xl"
@@ -442,7 +442,7 @@ export default function HomePage({
                     </div>
 
                     <div className="bg-gray-50 p-8 rounded-xl shadow hover:shadow-lg transition">
-                      <div className="bg-softTheme w-14 h-14 flex items-center justify-center rounded-lg mx-auto mb-4">
+                      <div className="bg-softTheme w-14 h-14 flex items-center justify-center rounded-lg  mb-4">
                         <FontAwesomeIcon
                           icon={faMap}
                           className="text-theme text-2xl"
@@ -458,7 +458,7 @@ export default function HomePage({
                     </div>
 
                     <div className="bg-gray-50 p-8 rounded-xl shadow hover:shadow-lg transition">
-                      <div className="bg-softTheme w-14 h-14 flex items-center justify-center rounded-lg mx-auto mb-4">
+                      <div className="bg-softTheme w-14 h-14 flex items-center justify-center rounded-lg  mb-4">
                         <FontAwesomeIcon
                           icon={faCheck}
                           className="text-theme text-2xl"
@@ -661,7 +661,7 @@ export default function HomePage({
 
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     <div className="bg-gray-50 p-8 rounded-xl shadow hover:shadow-lg transition">
-                      <div className="bg-softTheme w-14 h-14 flex items-center justify-center rounded-lg mx-auto mb-4">
+                      <div className="bg-softTheme w-14 h-14 flex items-center justify-center rounded-lg  mb-4">
                         <FontAwesomeIcon
                           icon={faHandshake}
                           className="text-theme text-2xl"
@@ -682,7 +682,9 @@ export default function HomePage({
                               className="text-white text-xs"
                             />
                           </div>
-                          <p className="text-gray-600">Auto-detect current location</p>
+                          <p className="text-gray-600">
+                            Auto-detect current location
+                          </p>
                         </div>
                         <div className="flex items-center mt-2 gap-2">
                           <div className="bg-theme rounded-full p-1 w-5 h-5 flex justify-center items-center">
@@ -691,13 +693,15 @@ export default function HomePage({
                               className="text-white text-xs"
                             />
                           </div>
-                          <p className="text-gray-600">Save multiple addresses</p>
+                          <p className="text-gray-600">
+                            Save multiple addresses
+                          </p>
                         </div>
                       </div>
                     </div>
 
                     <div className="bg-gray-50 p-8 rounded-xl shadow hover:shadow-lg transition">
-                      <div className="bg-softTheme w-14 h-14 flex items-center justify-center rounded-lg mx-auto mb-4">
+                      <div className="bg-softTheme w-14 h-14 flex items-center justify-center rounded-lg  mb-4">
                         <FontAwesomeIcon
                           icon={faClock}
                           className="text-theme text-2xl"
@@ -718,7 +722,9 @@ export default function HomePage({
                               className="text-white text-xs"
                             />
                           </div>
-                          <p className="text-gray-600">Verified local farmers</p>
+                          <p className="text-gray-600">
+                            Verified local farmers
+                          </p>
                         </div>
                         <div className="flex items-center mt-2 gap-2">
                           <div className="bg-theme rounded-full p-1 w-5 h-5 flex justify-center items-center">
@@ -727,13 +733,15 @@ export default function HomePage({
                               className="text-white text-xs"
                             />
                           </div>
-                          <p className="text-gray-600">Freshest produce nearby</p>
+                          <p className="text-gray-600">
+                            Freshest produce nearby
+                          </p>
                         </div>
                       </div>
                     </div>
 
                     <div className="bg-gray-50 p-8 rounded-xl shadow hover:shadow-lg transition">
-                      <div className="bg-softTheme w-14 h-14 flex items-center justify-center rounded-lg mx-auto mb-4">
+                      <div className="bg-softTheme w-14 h-14 flex items-center justify-center rounded-lg  mb-4">
                         <FontAwesomeIcon
                           icon={faDollarSign}
                           className="text-theme text-2xl"
@@ -754,7 +762,9 @@ export default function HomePage({
                               className="text-white text-xs"
                             />
                           </div>
-                          <p className="text-gray-600">Delivery within 24 hours</p>
+                          <p className="text-gray-600">
+                            Delivery within 24 hours
+                          </p>
                         </div>
                         <div className="flex items-center mt-2 gap-2">
                           <div className="bg-theme rounded-full p-1 w-5 h-5 flex justify-center items-center">
@@ -763,10 +773,80 @@ export default function HomePage({
                               className="text-white text-xs"
                             />
                           </div>
-                          <p className="text-gray-600">Reduced carbon footprint</p>
+                          <p className="text-gray-600">
+                            Reduced carbon footprint
+                          </p>
                         </div>
                       </div>
                     </div>
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* CTA Section */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.7 }}
+                className="w-full bg-gray-900 text-white rounded-2xl px-6 md:px-12 py-16 flex flex-col items-center justify-center gap-6 my-20"
+              >
+                <h2 className="text-3xl md:text-4xl font-bold text-center">
+                  Why Buy Local?
+                </h2>
+                {/* <p className="text-gray-300 text-lg text-center">
+                  Start selling or buying fresh produce today
+                </p> */}
+
+                <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+                  <div className="bg-gray-500 p-8 rounded-xl shadow hover:shadow-lg transition text-center">
+                    <div className="w-14 h-14 flex items-center justify-center rounded-lg mx-auto mb-0">
+                      <FontAwesomeIcon
+                        icon={faHandshake}
+                        className="text-white text-2xl"
+                      />
+                    </div>
+                    <h3 className="text-xl font-semibold mb-2 ">
+                      Fresh Produce
+                    </h3>
+                    <p className="text-white">Harvested just before delivery</p>
+                  </div>
+
+                  <div className="bg-gray-500 p-8 rounded-xl shadow hover:shadow-lg transition text-center">
+                    <div className="w-14 h-14 flex items-center justify-center rounded-lg mx-auto mb-0">
+                      <FontAwesomeIcon
+                        icon={faHandshake}
+                        className="text-white text-2xl"
+                      />
+                    </div>
+                    <h3 className="text-xl font-semibold mb-2 ">Fair Prices</h3>
+                    <p className="text-white">No middleman markup</p>
+                  </div>
+
+                  <div className="bg-gray-500 p-8 rounded-xl shadow hover:shadow-lg transition text-center">
+                    <div className="w-14 h-14 flex items-center justify-center rounded-lg mx-auto mb-0">
+                      <FontAwesomeIcon
+                        icon={faHandshake}
+                        className="text-white text-2xl"
+                      />
+                    </div>
+                    <h3 className="text-xl font-semibold mb-2 ">
+                      Support Local
+                    </h3>
+                    <p className="text-white">Help local farmers thrive</p>
+                  </div>
+
+                  <div className="bg-gray-500 p-8 rounded-xl shadow hover:shadow-lg transition text-center">
+                    <div className="w-14 h-14 flex items-center justify-center rounded-lg mx-auto mb-0">
+                      <FontAwesomeIcon
+                        icon={faHandshake}
+                        className="text-white text-2xl"
+                      />
+                    </div>
+                    <h3 className="text-xl font-semibold mb-2 ">
+                      Fast Delivery
+                    </h3>
+                    <p className="text-white">Get it within 24 hours</p>
                   </div>
                 </div>
               </motion.div>
@@ -796,7 +876,10 @@ export default function HomePage({
                         <div className="p-4">
                           <h3 className="font-semibold">Product Name</h3>
                           <div className="flex gap-1 items-center mt-1 -ml-1">
-                            <FontAwesomeIcon icon={faLocationDot} className="text-theme"/>
+                            <FontAwesomeIcon
+                              icon={faLocationDot}
+                              className="text-theme"
+                            />
                             <p className="text-sm text-gray-600">Farmer Name</p>
                           </div>
 
@@ -841,6 +924,143 @@ export default function HomePage({
                   </div>
                 </div>
               </section>
+
+              {/* Testimony Section */}
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+                className="w-full py-20 "
+              >
+                <div className="max-w-7xl mx-auto px-6 ">
+                  <h2 className="text-4xl font-bold mb-6 text-center">
+                    What Our Users Say
+                  </h2>
+
+                  <p className="text-gray-600 max-w-2xl mx-auto mb-12 text-center">
+                    Hear from farmers and buyers using DigiFamar
+                  </p>
+
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div className="bg-gray-50 p-8 rounded-xl shadow hover:shadow-lg transition">
+                      <div className="flex">
+                        <div className="bg-softTheme w-14 h-14 flex items-center justify-center rounded-full  mb-4">
+                          <FontAwesomeIcon
+                            icon={faHandshake}
+                            className="text-theme text-2xl"
+                          />
+                        </div>
+                        <div className="ml-4 flex flex-col justify-center">
+                          <h3 className="text-l font-bold">Robert M.</h3>
+                          <p className="text-gray-600 text-sm">Wheat Farmer, Kansas</p>
+                        </div>
+                      </div>
+                      <p className="text-gray-600">
+                        "DiGiFaMaR™ helped me connect with buyers in 5 new
+                        states. The escrow system gives everyone peace of mind."
+                      </p>
+                    </div>
+
+                    <div className="bg-gray-50 p-8 rounded-xl shadow hover:shadow-lg transition">
+                      <div className="flex">
+                        <div className="bg-softTheme w-14 h-14 flex items-center justify-center rounded-full  mb-4">
+                          <FontAwesomeIcon
+                            icon={faHandshake}
+                            className="text-theme text-2xl"
+                          />
+                        </div>
+                        <div className="ml-4 flex flex-col justify-center">
+                          <h3 className="text-l font-bold">Jennifer K.</h3>
+                          <p className="text-gray-600 text-sm">Restaurant Owner, Texas</p>
+                        </div>
+                      </div>
+                      <p className="text-gray-600">
+                        "Getting fresh produce directly from farmers has
+                        transformed our menu."
+                      </p>
+                    </div>
+
+                    <div className="bg-gray-50 p-8 rounded-xl shadow hover:shadow-lg transition">
+                      <div className="flex">
+                        <div className="bg-softTheme w-14 h-14 flex items-center justify-center rounded-full  mb-4">
+                          <FontAwesomeIcon
+                            icon={faHandshake}
+                            className="text-theme text-2xl"
+                          />
+                        </div>
+                        <div className="ml-4 flex flex-col justify-center">
+                          <h3 className="text-l font-bold">Sarah W.</h3>
+                          <p className="text-gray-600 text-sm">Organic Berry Farm, OR</p>
+                        </div>
+                      </div>
+                      <p className="text-gray-600">
+                        "Been using it for 8 months now. Connected with two
+                        restaurant chains that now buy from us regularly."
+                      </p>
+                    </div>
+
+                    <div className="bg-gray-50 p-8 rounded-xl shadow hover:shadow-lg transition">
+                      <div className="flex">
+                        <div className="bg-softTheme w-14 h-14 flex items-center justify-center rounded-full  mb-4">
+                          <FontAwesomeIcon
+                            icon={faHandshake}
+                            className="text-theme text-2xl"
+                          />
+                        </div>
+                        <div className="ml-4 flex flex-col justify-center">
+                          <h3 className="text-l font-bold">David T.</h3>
+                          <p className="text-gray-600 text-sm">Cattle Rancher, TX</p>
+                        </div>
+                      </div>
+                      <p className="text-gray-600">
+                        "Skeptical at first but gave it a shot. Now I have
+                        consistent buyers for my beef. "
+                      </p>
+                    </div>
+
+                    <div className="bg-gray-50 p-8 rounded-xl shadow hover:shadow-lg transition">
+                      <div className="flex">
+                        <div className="bg-softTheme w-14 h-14 flex items-center justify-center rounded-full  mb-4">
+                          <FontAwesomeIcon
+                            icon={faHandshake}
+                            className="text-theme text-2xl"
+                          />
+                        </div>
+                        <div className="ml-4 flex flex-col justify-center">
+                          <h3 className="text-l font-bold">Maria R.</h3>
+                          <p className="text-gray-600 text-sm">Grocery Chain Buyer, FL</p>
+                        </div>
+                      </div>
+                      <p className="text-gray-600">
+                        "Our purchasing costs dropped significantly. Direct
+                        communication with farmers means better quality
+                        control."
+                      </p>
+                    </div>
+
+                    <div className="bg-gray-50 p-8 rounded-xl shadow hover:shadow-lg transition">
+                      <div className="flex">
+                        <div className="bg-softTheme w-14 h-14 flex items-center justify-center rounded-full  mb-4">
+                          <FontAwesomeIcon
+                            icon={faHandshake}
+                            className="text-theme text-2xl"
+                          />
+                        </div>
+                        <div className="ml-4 flex flex-col justify-center">
+                          <h3 className="text-l font-bold">Thomas W.</h3>
+                          <p className="text-gray-600 text-sm">Corn & Soybean Farmer, Iowa</p>
+                        </div>
+                      </div>
+                      <p className="text-gray-600">
+                        "Finally, a platform that understands what farmers need.
+                        Sold my entire harvest before it was even ready to
+                        pick."
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
 
               {/* DGF IMPACT STATS */}
               <motion.div

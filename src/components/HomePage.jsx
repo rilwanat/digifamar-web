@@ -23,7 +23,11 @@ import background from "../assets/images/background2.png";
 import man from "../assets/images/man.jpg";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronLeft, faSearch } from "@fortawesome/free-solid-svg-icons";
+import {
+  faCartShopping,
+  faChevronLeft,
+  faSearch,
+} from "@fortawesome/free-solid-svg-icons";
 import {
   faCalendarAlt,
   faClock,
@@ -325,7 +329,7 @@ export default function HomePage({
                   <p className="text-gray-600 text-lg mb-6 max-w-xl text-center">
                     Our easy-to-use mobile app puts the power of direct market
                     access in every farmer's pocket. Connect with buyers,
-                    negotiate prices, and secure payments — all from your
+                    negotiate prices, and secure payments - all from your
                     smartphone.
                   </p>
                 </div>
@@ -380,7 +384,7 @@ export default function HomePage({
               >
                 <div className="max-w-7xl mx-auto px-6 ">
                   <h2 className="text-4xl font-bold mb-6 text-center">
-                    Why Choose <span className="text-theme">DiGiFaMaR</span>?
+                    Why Choose <span className="text-theme">DiGiFaMaR</span>™?
                   </h2>
 
                   <p className="text-gray-600 max-w-2xl mx-auto mb-12 text-center">
@@ -391,7 +395,7 @@ export default function HomePage({
 
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     <div className="bg-gray-50 p-8 rounded-xl shadow hover:shadow-lg transition">
-                      <div className="bg-softTheme w-14 h-14 flex items-center justify-center rounded-lg  mb-4">
+                      <div className="bg-softerTheme w-14 h-14 flex items-center justify-center rounded-lg  mb-4">
                         <FontAwesomeIcon
                           icon={faHandshake}
                           className="text-theme text-2xl"
@@ -407,7 +411,7 @@ export default function HomePage({
                     </div>
 
                     <div className="bg-gray-50 p-8 rounded-xl shadow hover:shadow-lg transition">
-                      <div className="bg-softTheme w-14 h-14 flex items-center justify-center rounded-lg  mb-4">
+                      <div className="bg-softerTheme w-14 h-14 flex items-center justify-center rounded-lg  mb-4">
                         <FontAwesomeIcon
                           icon={faClock}
                           className="text-theme text-2xl"
@@ -422,7 +426,7 @@ export default function HomePage({
                     </div>
 
                     <div className="bg-gray-50 p-8 rounded-xl shadow hover:shadow-lg transition">
-                      <div className="bg-softTheme w-14 h-14 flex items-center justify-center rounded-lg  mb-4">
+                      <div className="bg-softerTheme w-14 h-14 flex items-center justify-center rounded-lg  mb-4">
                         <FontAwesomeIcon
                           icon={faDollarSign}
                           className="text-theme text-2xl"
@@ -437,7 +441,7 @@ export default function HomePage({
                     </div>
 
                     <div className="bg-gray-50 p-8 rounded-xl shadow hover:shadow-lg transition">
-                      <div className="bg-softTheme w-14 h-14 flex items-center justify-center rounded-lg  mb-4">
+                      <div className="bg-softerTheme w-14 h-14 flex items-center justify-center rounded-lg  mb-4">
                         <FontAwesomeIcon
                           icon={faShield}
                           className="text-theme text-2xl"
@@ -453,7 +457,7 @@ export default function HomePage({
                     </div>
 
                     <div className="bg-gray-50 p-8 rounded-xl shadow hover:shadow-lg transition">
-                      <div className="bg-softTheme w-14 h-14 flex items-center justify-center rounded-lg  mb-4">
+                      <div className="bg-softerTheme w-14 h-14 flex items-center justify-center rounded-lg  mb-4">
                         <FontAwesomeIcon
                           icon={faMap}
                           className="text-theme text-2xl"
@@ -469,7 +473,7 @@ export default function HomePage({
                     </div>
 
                     <div className="bg-gray-50 p-8 rounded-xl shadow hover:shadow-lg transition">
-                      <div className="bg-softTheme w-14 h-14 flex items-center justify-center rounded-lg  mb-4">
+                      <div className="bg-softerTheme w-14 h-14 flex items-center justify-center rounded-lg  mb-4">
                         <FontAwesomeIcon
                           icon={faCheck}
                           className="text-theme text-2xl"
@@ -498,7 +502,7 @@ export default function HomePage({
                 <div className="text-center mb-12">
                   <h2 className="text-4xl font-bold mb-2">How It Works</h2>
                   <p className="text-gray-600">
-                    Secure Escrow System — From payment to delivery, every
+                    Secure Escrow System - From payment to delivery, every
                     transaction is protected
                   </p>
                 </div>
@@ -537,8 +541,8 @@ export default function HomePage({
                   ].map((step, index) => (
                     <div key={index} className="flex items-center">
                       {/* Card */}
-                      <div className="w-[200px] h-[240px] bg-white border rounded-xl p-6 shadow-sm flex flex-col">
-                        <div className="w-10 h-10 bg-green-500 text-white flex items-center justify-center rounded-lg font-bold mb-4">
+                      <div className="w-[200px] h-[240px] bg-gray-50 border border-gray-300 rounded-xl p-6 shadow-sm flex flex-col hover:bg-white hover:shadow-md transition">
+                        <div className="w-10 h-10 bg-theme text-white flex items-center justify-center rounded-lg font-bold mb-4">
                           {index + 1}
                         </div>
 
@@ -627,7 +631,7 @@ export default function HomePage({
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.7 }}
-                className="w-full bg-gray-900 text-white rounded-2xl px-6 md:px-12 py-16 flex flex-col items-center justify-center gap-6 my-20"
+                className="w-full bg-gray-800 text-white rounded-2xl px-6 md:px-12 py-16 flex flex-col items-center justify-center gap-6 my-10"
               >
                 <h2 className="text-3xl md:text-4xl font-bold text-center">
                   Ready to Get Started?
@@ -644,7 +648,7 @@ export default function HomePage({
                   </button>
 
                   {/* Contact Sales */}
-                  <button className="cursor-pointer flex items-center justify-center gap-2 bg-gray-800 hover:bg-gray-700 transition text-white font-semibold px-6 py-3 rounded-lg">
+                  <button className="cursor-pointer flex items-center justify-center gap-2 bg-gray-600 hover:bg-gray-700 transition text-white font-semibold px-6 py-3 rounded-lg border border-gray-400">
                     Contact Sales
                     <FontAwesomeIcon icon={faPhone} />
                   </button>
@@ -659,6 +663,15 @@ export default function HomePage({
                 transition={{ duration: 0.6 }}
                 className="w-full py-20 "
               >
+                <div className="flex gap-1 items-center my-2 rounded-4xl bg-gray-100 px-6 py-4 w-max mx-auto mb-6">
+                  <FontAwesomeIcon
+                    icon={faLocationDot}
+                    className="text-theme"
+                  />
+                  <p className="text-sm font-bold text-theme">
+                    SMART GEOLOCATION
+                  </p>
+                </div>
                 <div className="max-w-7xl mx-auto px-6">
                   <h2 className="text-4xl font-bold mb-6 text-center">
                     Find Nearby Farmers,{" "}
@@ -672,7 +685,7 @@ export default function HomePage({
 
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     <div className="bg-gray-50 p-8 rounded-xl shadow hover:shadow-lg transition">
-                      <div className="bg-softTheme w-14 h-14 flex items-center justify-center rounded-lg  mb-4">
+                      <div className="bg-softerTheme w-14 h-14 flex items-center justify-center rounded-lg  mb-4">
                         <FontAwesomeIcon
                           icon={faHandshake}
                           className="text-theme text-2xl"
@@ -712,7 +725,7 @@ export default function HomePage({
                     </div>
 
                     <div className="bg-gray-50 p-8 rounded-xl shadow hover:shadow-lg transition">
-                      <div className="bg-softTheme w-14 h-14 flex items-center justify-center rounded-lg  mb-4">
+                      <div className="bg-softerTheme w-14 h-14 flex items-center justify-center rounded-lg  mb-4">
                         <FontAwesomeIcon
                           icon={faClock}
                           className="text-theme text-2xl"
@@ -752,7 +765,7 @@ export default function HomePage({
                     </div>
 
                     <div className="bg-gray-50 p-8 rounded-xl shadow hover:shadow-lg transition">
-                      <div className="bg-softTheme w-14 h-14 flex items-center justify-center rounded-lg  mb-4">
+                      <div className="bg-softerTheme w-14 h-14 flex items-center justify-center rounded-lg  mb-4">
                         <FontAwesomeIcon
                           icon={faDollarSign}
                           className="text-theme text-2xl"
@@ -800,9 +813,9 @@ export default function HomePage({
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.7 }}
-                className="w-full bg-gray-900 text-white rounded-2xl px-6 md:px-12 py-16 flex flex-col items-center justify-center gap-6 my-20"
+                className="w-full bg-linear-to-r from-theme  to-green-500 text-white rounded-2xl px-6 md:px-12 py-16 flex flex-col items-center justify-center gap-6 my-20"
               >
-                <h2 className="text-3xl md:text-4xl font-bold text-center">
+                <h2 className="text-3xl md:text-4xl font-bold text-center ">
                   Why Buy Local?
                 </h2>
                 {/* <p className="text-gray-300 text-lg text-center">
@@ -810,54 +823,80 @@ export default function HomePage({
                 </p> */}
 
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-                  <div className="bg-gray-500 p-8 rounded-xl shadow hover:shadow-lg transition text-center">
+                  <div className=" p-0  transition text-center">
                     <div className="w-14 h-14 flex items-center justify-center rounded-lg mx-auto mb-0">
                       <FontAwesomeIcon
                         icon={faHandshake}
                         className="text-white text-2xl"
                       />
                     </div>
-                    <h3 className="text-xl font-semibold mb-2 ">
-                      Fresh Produce
-                    </h3>
+                    <h3 className="text-xl font-bold mb-2 ">Fresher Produce</h3>
                     <p className="text-white">Harvested just before delivery</p>
                   </div>
 
-                  <div className="bg-gray-500 p-8 rounded-xl shadow hover:shadow-lg transition text-center">
+                  <div className=" p-0  transition text-center">
                     <div className="w-14 h-14 flex items-center justify-center rounded-lg mx-auto mb-0">
                       <FontAwesomeIcon
                         icon={faHandshake}
                         className="text-white text-2xl"
                       />
                     </div>
-                    <h3 className="text-xl font-semibold mb-2 ">Fair Prices</h3>
+                    <h3 className="text-xl font-bold mb-2 ">Fair Prices</h3>
                     <p className="text-white">No middleman markup</p>
                   </div>
 
-                  <div className="bg-gray-500 p-8 rounded-xl shadow hover:shadow-lg transition text-center">
+                  <div className=" p-0  transition text-center">
                     <div className="w-14 h-14 flex items-center justify-center rounded-lg mx-auto mb-0">
                       <FontAwesomeIcon
                         icon={faHandshake}
                         className="text-white text-2xl"
                       />
                     </div>
-                    <h3 className="text-xl font-semibold mb-2 ">
-                      Support Local
-                    </h3>
+                    <h3 className="text-xl font-bold mb-2 ">Support Local</h3>
                     <p className="text-white">Help local farmers thrive</p>
                   </div>
 
-                  <div className="bg-gray-500 p-8 rounded-xl shadow hover:shadow-lg transition text-center">
+                  <div className=" p-0  transition text-center">
                     <div className="w-14 h-14 flex items-center justify-center rounded-lg mx-auto mb-0">
                       <FontAwesomeIcon
                         icon={faHandshake}
                         className="text-white text-2xl"
                       />
                     </div>
-                    <h3 className="text-xl font-semibold mb-2 ">
-                      Fast Delivery
-                    </h3>
+                    <h3 className="text-xl font-bold mb-2 ">Fast Delivery</h3>
                     <p className="text-white">Get it within 24 hours</p>
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* DGF IMPACT STATS */}
+              <motion.div
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.7 }}
+                className="w-full mb-8 mt-6 gap-8px-6 md:px-20 lg:px-32 py-20 bg-white rounded-4xl text-black"
+              >
+                <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-black">
+                  DiGiFaMaR in <span className="font-extrabold">Numbers</span>
+                </h2>
+
+                <div className="grid grid-cols-1 md:grid-cols-4 gap-10 text-center">
+                  <div>
+                    <h3 className="text-4xl font-extrabold">50</h3>
+                    <p className="text-lg mt-2">States Covered</p>
+                  </div>
+                  <div>
+                    <h3 className="text-4xl font-extrabold">15K+</h3>
+                    <p className="text-lg mt-2">Verified Users</p>
+                  </div>
+                  <div>
+                    <h3 className="text-4xl font-extrabold">36K+</h3>
+                    <p className="text-lg mt-2">Verified Farmers</p>
+                  </div>
+                  <div>
+                    <h3 className="text-4xl font-extrabold">500+</h3>
+                    <p className="text-lg mt-2">Total Products</p>
                   </div>
                 </div>
               </motion.div>
@@ -897,9 +936,100 @@ export default function HomePage({
                           <div className="mt-3 text-theme font-bold">
                             ₦ Price
                           </div>
+
+                          <div className="flex gap-1 items-center justify-center my-2 rounded-xl bg-theme px-4 py-2 w-full mx-auto mb-2">
+                            <FontAwesomeIcon
+                              icon={faCartShopping}
+                              className="text-white"
+                            />
+                            <p className="text-sm font-bold text-white">
+                              View Details
+                            </p>
+                          </div>
                         </div>
                       </div>
                     ))}
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Testimony Section */}
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+                className="w-full py-20 "
+              >
+                <div className="max-w-7xl mx-auto px-6 ">
+                  <h2 className="text-4xl font-bold mb-6 text-center">
+                    Browse by Category
+                  </h2>
+
+                  <div className="grid grid-cols-1 md:grid-cols-6 gap-4">
+                    <div className="bg-lightGreen p-8 rounded-xl shadow hover:shadow-lg transition flex items-center justify-center cursor-pointer">
+                      <div className=" w-14 h-14 flex flex-col items-center  rounded-full ">
+                        <FontAwesomeIcon
+                          icon={faHandshake}
+                          className="text-theme text-2xl"
+                        />
+                        <p className="text-black font-semibold mt-2">
+                          Vegetables
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="bg-lightPink p-8 rounded-xl shadow hover:shadow-lg transition flex items-center justify-center cursor-pointer">
+                      <div className=" w-14 h-14 flex flex-col items-center justify-center rounded-full ">
+                        <FontAwesomeIcon
+                          icon={faHandshake}
+                          className="text-theme text-2xl"
+                        />
+                        <p className="text-black font-semibold mt-2">Fruits</p>
+                      </div>
+                    </div>
+
+                    <div className="bg-lightOrange p-8 rounded-xl shadow hover:shadow-lg transition flex items-center justify-center cursor-pointer">
+                      <div className=" w-14 h-14 flex flex-col items-center justify-center rounded-full ">
+                        <FontAwesomeIcon
+                          icon={faHandshake}
+                          className="text-theme text-2xl"
+                        />
+                        <p className="text-black font-semibold mt-2">Grains</p>
+                      </div>
+                    </div>
+
+                    <div className="bg-lightBlue p-8 rounded-xl shadow hover:shadow-lg transition flex items-center justify-center cursor-pointer">
+                      <div className=" w-14 h-14 flex flex-col items-center justify-center rounded-full ">
+                        <FontAwesomeIcon
+                          icon={faHandshake}
+                          className="text-theme text-2xl"
+                        />
+                        <p className="text-black font-semibold mt-2">
+                          Livestock
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="bg-lightPurple p-8 rounded-xl shadow hover:shadow-lg transition flex items-center justify-center cursor-pointer">
+                      <div className=" w-14 h-14 flex flex-col items-center justify-center rounded-full ">
+                        <FontAwesomeIcon
+                          icon={faHandshake}
+                          className="text-theme text-2xl"
+                        />
+                        <p className="text-black font-semibold mt-2">Dairy</p>
+                      </div>
+                    </div>
+
+                    <div className="bg-lightBrown p-8 rounded-xl shadow hover:shadow-lg transition flex items-center justify-center cursor-pointer">
+                      <div className=" w-14 h-14 flex flex-col items-center justify-center rounded-full ">
+                        <FontAwesomeIcon
+                          icon={faHandshake}
+                          className="text-theme text-2xl"
+                        />
+                        <p className="text-black font-semibold mt-2">Poultry</p>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </motion.div>
@@ -956,7 +1086,7 @@ export default function HomePage({
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     <div className="bg-gray-50 p-8 rounded-xl shadow hover:shadow-lg transition">
                       <div className="flex">
-                        <div className="bg-softTheme w-14 h-14 flex items-center justify-center rounded-full  mb-4">
+                        <div className="bg-softerTheme w-14 h-14 flex items-center justify-center rounded-full  mb-4">
                           <FontAwesomeIcon
                             icon={faHandshake}
                             className="text-theme text-2xl"
@@ -977,7 +1107,7 @@ export default function HomePage({
 
                     <div className="bg-gray-50 p-8 rounded-xl shadow hover:shadow-lg transition">
                       <div className="flex">
-                        <div className="bg-softTheme w-14 h-14 flex items-center justify-center rounded-full  mb-4">
+                        <div className="bg-softerTheme w-14 h-14 flex items-center justify-center rounded-full  mb-4">
                           <FontAwesomeIcon
                             icon={faHandshake}
                             className="text-theme text-2xl"
@@ -998,7 +1128,7 @@ export default function HomePage({
 
                     <div className="bg-gray-50 p-8 rounded-xl shadow hover:shadow-lg transition">
                       <div className="flex">
-                        <div className="bg-softTheme w-14 h-14 flex items-center justify-center rounded-full  mb-4">
+                        <div className="bg-softerTheme w-14 h-14 flex items-center justify-center rounded-full  mb-4">
                           <FontAwesomeIcon
                             icon={faHandshake}
                             className="text-theme text-2xl"
@@ -1019,7 +1149,7 @@ export default function HomePage({
 
                     <div className="bg-gray-50 p-8 rounded-xl shadow hover:shadow-lg transition">
                       <div className="flex">
-                        <div className="bg-softTheme w-14 h-14 flex items-center justify-center rounded-full  mb-4">
+                        <div className="bg-softerTheme w-14 h-14 flex items-center justify-center rounded-full  mb-4">
                           <FontAwesomeIcon
                             icon={faHandshake}
                             className="text-theme text-2xl"
@@ -1040,7 +1170,7 @@ export default function HomePage({
 
                     <div className="bg-gray-50 p-8 rounded-xl shadow hover:shadow-lg transition">
                       <div className="flex">
-                        <div className="bg-softTheme w-14 h-14 flex items-center justify-center rounded-full  mb-4">
+                        <div className="bg-softerTheme w-14 h-14 flex items-center justify-center rounded-full  mb-4">
                           <FontAwesomeIcon
                             icon={faHandshake}
                             className="text-theme text-2xl"
@@ -1062,7 +1192,7 @@ export default function HomePage({
 
                     <div className="bg-gray-50 p-8 rounded-xl shadow hover:shadow-lg transition">
                       <div className="flex">
-                        <div className="bg-softTheme w-14 h-14 flex items-center justify-center rounded-full  mb-4">
+                        <div className="bg-softerTheme w-14 h-14 flex items-center justify-center rounded-full  mb-4">
                           <FontAwesomeIcon
                             icon={faHandshake}
                             className="text-theme text-2xl"
@@ -1081,38 +1211,6 @@ export default function HomePage({
                         pick."
                       </p>
                     </div>
-                  </div>
-                </div>
-              </motion.div>
-
-              {/* DGF IMPACT STATS */}
-              <motion.div
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.7 }}
-                className="w-full mb-8 mt-6 gap-8px-6 md:px-20 lg:px-32 py-20 bg-theme text-black"
-              >
-                <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-black">
-                  DiGiFaMaR in <span className="font-extrabold">Numbers</span>
-                </h2>
-
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-10 text-center">
-                  <div>
-                    <h3 className="text-4xl font-extrabold">250K+</h3>
-                    <p className="text-lg mt-2">Online Supporters</p>
-                  </div>
-                  <div>
-                    <h3 className="text-4xl font-extrabold">15K+</h3>
-                    <p className="text-lg mt-2">Registered Users</p>
-                  </div>
-                  <div>
-                    <h3 className="text-4xl font-extrabold">36</h3>
-                    <p className="text-lg mt-2">Registered Farmers</p>
-                  </div>
-                  <div>
-                    <h3 className="text-4xl font-extrabold">500+</h3>
-                    <p className="text-lg mt-2">Total Products</p>
                   </div>
                 </div>
               </motion.div>

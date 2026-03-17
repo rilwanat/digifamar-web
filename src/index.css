@@ -5,15 +5,26 @@
 
 
 @theme{
-    --color-theme: #38bf70;
+    /* --color-theme: #38bf70; */
+    --color-theme: #059669;
     --color-black: #000000;
     --color-white: #ffffff;
     
     --color-softTheme: #aeeba6;
+    --color-softerTheme: #d1fae5;
     --color-green: #16a34a;
     
         --font-sans: 'Nunito Sans', sans-serif;
-}
+
+    --color-lightGreen: #d3fbe1;
+    --color-lightPink: #fed7d7;
+    --color-lightOrange: #fee998;
+    --color-lightBlue: #c4defe;
+    --color-lightPurple: #ebd9ff;
+    --color-lightBrown: #d2b48c;
+
+
+      }
 
 
 

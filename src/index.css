@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;700;800;900&display=swap');
+
+
+@import "tailwindcss";
+
+
+@theme{
+    --color-theme: #38bf70;
+    --color-black: #000000;
+    --color-white: #ffffff;
+    
+    --color-softTheme: #aeeba6;
+    --color-green: #16a34a;
+    
+        --font-sans: 'Nunito Sans', sans-serif;
+}
+
+
+
+
+/* Disable text selection */
+body {
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Standard syntax */
+  }
+
+
+  img {
+    user-select: none; /* Prevent text selection */
+    pointer-events: none; /* Disable click and drag */
+  }
+
+
+
+/* Add this to your global CSS file or style tag */
+.react-responsive-carousel .carousel .control-arrow {
+    opacity: 1 !important;
+    background: rgba(0,0,0,0.3) !important;
+    height: 50px !important;
+    width: 40px !important;
+    margin-top: -25px !important;
+    top: 50% !important;
+    border-radius: 50% !important;
+  }
+  
+  .react-responsive-carousel .carousel .control-arrow:hover {
+    background: rgba(0,0,0,0.6) !important;
+  }
+  
+  .react-responsive-carousel .carousel .control-arrow:before {
+    margin: 0 5px !important;
+  }

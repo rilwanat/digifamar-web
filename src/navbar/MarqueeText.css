@@ -1,0 +1,27 @@
+.scroll-container {
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  width: 100%;
+}
+
+.scroll-text-wrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.scroll-text {
+  display: inline-block;
+  white-space: nowrap;
+  animation: scroll-left var(--scroll-duration, 15s) linear infinite; /* Use dynamic duration */
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(100%); /* Start fully off-screen to the right */
+  }
+  100% {
+    transform: translateX(calc(-100% - 1px)); /* Ensure it goes fully off-screen to the left */
+  }
+}

@@ -27,8 +27,8 @@ import { getCookie, deleteCookie } from './auth/authUtils'; // Import getCookie 
 
 
 import ProtectedUserRoute from './auth/protectedUserRoute';
-import ProtectedFarmerRoute from './auth/ProtectedFarmerRoute';
-import ProtectedAdminRoute from './auth/ProtectedAdminRoute';
+import ProtectedFarmerRoute from './auth/protectedFarmerRoute';
+import ProtectedAdminRoute from './auth/protectedAdminRoute';
 
 
 function App() {

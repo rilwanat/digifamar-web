@@ -12,16 +12,16 @@ const Hero = ({  }) => {
   //
   const images = [
     hero1,
-    hero2,
+    // hero2,
   ];
 
   const headerText = [
-    'Welcome to DiGiFaMaR',
-    'Welcome to DiGiFaMaR',
+    '',
+    // 'Welcome to DiGiFaMaR',
 ];
   const subText = [
     '...',
-    '...',
+    // '...',
 ];
 
   //
@@ -54,7 +54,7 @@ const Hero = ({  }) => {
   return (
     // <div className="relative w-full h-[740px] overflow-hidden">
       // <div className="relative w-full h-screen -mt-[0px] overflow-hidden">
-      <div className="relative w-full h-[680px] -mt-[0px] overflow-hidden">
+      <div className="relative w-full h-[740px] -mt-[0px] overflow-hidden">
       <AnimatePresence>
         <motion.img
           key={images[currentImageIndex]}

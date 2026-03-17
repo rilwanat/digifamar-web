@@ -20,6 +20,8 @@ import logoFull from "../assets/images/logo-512x512.png"; //logo-full-h768.png";
 
 import background from "../assets/images/background2.png";
 
+import man from "../assets/images/man.jpg";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronLeft, faSearch } from "@fortawesome/free-solid-svg-icons";
 import {
@@ -267,7 +269,7 @@ export default function HomePage({
       <div className="pt-20"></div>
       {/* <div className=""></div> */}
 
-      <DgfBanner className="" />
+      {/* <DgfBanner className="" /> */}
 
       <Hero />
 
@@ -293,6 +295,15 @@ export default function HomePage({
               // }}
             >
               {/* First Section */}
+              <div className="my-10 rounded-xl overflow-hidden">
+                <img
+                  src={man}
+                  alt="example"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+
+              {/* Fresh Produe */}
               <motion.div
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -953,7 +964,9 @@ export default function HomePage({
                         </div>
                         <div className="ml-4 flex flex-col justify-center">
                           <h3 className="text-l font-bold">Robert M.</h3>
-                          <p className="text-gray-600 text-sm">Wheat Farmer, Kansas</p>
+                          <p className="text-gray-600 text-sm">
+                            Wheat Farmer, Kansas
+                          </p>
                         </div>
                       </div>
                       <p className="text-gray-600">
@@ -972,7 +985,9 @@ export default function HomePage({
                         </div>
                         <div className="ml-4 flex flex-col justify-center">
                           <h3 className="text-l font-bold">Jennifer K.</h3>
-                          <p className="text-gray-600 text-sm">Restaurant Owner, Texas</p>
+                          <p className="text-gray-600 text-sm">
+                            Restaurant Owner, Texas
+                          </p>
                         </div>
                       </div>
                       <p className="text-gray-600">
@@ -991,7 +1006,9 @@ export default function HomePage({
                         </div>
                         <div className="ml-4 flex flex-col justify-center">
                           <h3 className="text-l font-bold">Sarah W.</h3>
-                          <p className="text-gray-600 text-sm">Organic Berry Farm, OR</p>
+                          <p className="text-gray-600 text-sm">
+                            Organic Berry Farm, OR
+                          </p>
                         </div>
                       </div>
                       <p className="text-gray-600">
@@ -1010,7 +1027,9 @@ export default function HomePage({
                         </div>
                         <div className="ml-4 flex flex-col justify-center">
                           <h3 className="text-l font-bold">David T.</h3>
-                          <p className="text-gray-600 text-sm">Cattle Rancher, TX</p>
+                          <p className="text-gray-600 text-sm">
+                            Cattle Rancher, TX
+                          </p>
                         </div>
                       </div>
                       <p className="text-gray-600">
@@ -1029,7 +1048,9 @@ export default function HomePage({
                         </div>
                         <div className="ml-4 flex flex-col justify-center">
                           <h3 className="text-l font-bold">Maria R.</h3>
-                          <p className="text-gray-600 text-sm">Grocery Chain Buyer, FL</p>
+                          <p className="text-gray-600 text-sm">
+                            Grocery Chain Buyer, FL
+                          </p>
                         </div>
                       </div>
                       <p className="text-gray-600">
@@ -1049,7 +1070,9 @@ export default function HomePage({
                         </div>
                         <div className="ml-4 flex flex-col justify-center">
                           <h3 className="text-l font-bold">Thomas W.</h3>
-                          <p className="text-gray-600 text-sm">Corn & Soybean Farmer, Iowa</p>
+                          <p className="text-gray-600 text-sm">
+                            Corn & Soybean Farmer, Iowa
+                          </p>
                         </div>
                       </div>
                       <p className="text-gray-600">

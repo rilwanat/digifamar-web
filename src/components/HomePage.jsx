@@ -26,9 +26,15 @@ import {
   faCalendarAlt,
   faClock,
   faMapMarkerAlt,
+  faEye,
   faGlobe,
+  faBullseye,
+  faCheck,
+  faArrowRight,
+  faRotateLeft,
+
+  faShieldAlt, faPhone
 } from "@fortawesome/free-solid-svg-icons";
-import { faEye, faBullseye } from "@fortawesome/free-solid-svg-icons";
 
 import NotificationModal from "./modals/NotificationModal";
 
@@ -281,170 +287,423 @@ export default function HomePage({
               //   backgroundPosition: 'center',
               // }}
             >
+              {/* First Section */}
               <motion.div
-                initial={{ y: 10, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ delay: 0.6, duration: 0.4 }}
-                className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8 mt-6"
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.7 }}
+                className="flex flex-col gap-12 items-center py-16"
               >
-                <div className=" xs:p-8 py-8 rounded-lg">
-                  <div className="flex flex-col items-start mb-4">
-                    <h2 className="text-4xl font-semibold text-black mb-4">
-                      Welcome to{" "}
-                      <span className="text-theme font-bold">DiGiFaMaR!</span>
-                    </h2>
-                    <p className="text-lg text-black mb-4 ">DiGiFaMaR is .</p>
-
-                    <div
-                      onClick={() => {
-                        navigate("/about-us");
-                      }}
-                      style={{
-                        width: "176px",
-                        borderWidth: "1px",
-                        userSelect: "none",
-                      }}
-                      className="text-center  border-theme bg-theme rounded-lg px-4 py-2 text-white text-sm  mx-1 
-                      cursor-pointer
-                      hover:text-white hover:bg-black
-                      "
-                    >
-                      Learn More
-                    </div>
-                  </div>
-                </div>
-
-                {/* <div className="relative w-full flex items-center justify-center">
-                  <div className="flex w-full items-center justify-center">
-                    <img
-                      src={logo}
-                      className="w-[300px] border-2 border-theme rounded-lg shadow-md"
-                      style={{
-                        // width: "100%",
-                        // height: "100%",
-                        objectFit: "cover",
-                        // userSelect: "none",
-                        // pointerEvents: "none",
-                      }}
-                    />
-                    <div className="flex flex-col items-start">
-                      <div
-                        className=" px-4 py-0 text-theme rounded-lg   font-bold"
-                        // style={{ color: "#EBEA1C" }}
-                      >
-                        NAME NAME
-                      </div>
-                      <div className="mt-1 ml-4" style={{ fontWeight: "600" }}>
-                        DiGiFaMaR, President
-                      </div>
-                    </div>
-                  </div>
-                </div> */}
-              </motion.div>
-
-              <motion.div
-                initial={{ scale: 0.8, opacity: 0 }}
-                animate={{ scale: 1, opacity: 1 }}
-                transition={{ delay: 0.6, duration: 0.5 }}
-                className="grid grid-cols-1  gap-8 mb-8 mt-6"
-              >
-                <div className=" xs:p-8 py-8 rounded-lg">
-                  <h2 className="text-2xl font-semibold text-black mb-4 text-center">
-                    <span className="text-theme font-bold">DiGiFaMaR</span> is
-                    proudly supported by:
+                {/* LEFT TEXT */}
+                <div className="flex flex-col items-center">
+                  <h2 className="text-4xl font-bold text-black mb-4 text-center">
+                    Fresh Produce,{" "}
+                    <span className="text-theme">Direct from Farmers</span>
                   </h2>
 
-                  <div className="w-full flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-10">
-                    <div className="relative w-full sm:w-1/4 flex sm:flex-col-reverse items-center justify-center">
-                      <div className="flex flex-col items-start my-4">
-                        <div
-                          className=" px-4 py-0 text-theme rounded-lg   font-bold"
-                          // style={{ color: "#EBEA1C" }}
-                        >
-                          Name Name
-                        </div>
-                        <div
-                          className="mt-1 ml-4"
-                          style={{ fontWeight: "600" }}
-                        >
-                          Position
-                        </div>
+                  <h3 className="text-xl text-center font-semibold text-gray-700 mb-4">
+                    Empowering Farmers with Modern Technology
+                  </h3>
+
+                  <p className="text-gray-600 text-lg mb-6 max-w-xl text-center">
+                    Our easy-to-use mobile app puts the power of direct market
+                    access in every farmer's pocket. Connect with buyers,
+                    negotiate prices, and secure payments — all from your
+                    smartphone.
+                  </p>
+                </div>
+
+                {/* BOTTOM FEATURES */}
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                  {/* Easy to Use */}
+                  <div className="bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center hover:shadow-lg transition">
+                    <FontAwesomeIcon
+                      icon={faCheck}
+                      className="text-theme text-3xl mb-3"
+                    />
+                    <h4 className="font-semibold text-lg">Easy to Use</h4>
+                    <p className="text-sm text-gray-600 mt-1">
+                      Simple interface designed for farmers and buyers.
+                    </p>
+                  </div>
+
+                  {/* Secure Payments */}
+                  <div className="bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center hover:shadow-lg transition">
+                    <FontAwesomeIcon
+                      icon={faCheck}
+                      className="text-theme text-3xl mb-3"
+                    />
+                    <h4 className="font-semibold text-lg">Secure Payments</h4>
+                    <p className="text-sm text-gray-600 mt-1">
+                      Escrow protected transactions ensure safe trading.
+                    </p>
+                  </div>
+
+                  {/* Real-time Updates */}
+                  <div className="bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center hover:shadow-lg transition">
+                    <FontAwesomeIcon
+                      icon={faCheck}
+                      className="text-theme text-3xl mb-3"
+                    />
+                    <h4 className="font-semibold text-lg">Real-time Updates</h4>
+                    <p className="text-sm text-gray-600 mt-1">
+                      Stay informed with instant order and price updates.
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Features Section */}
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+                className="w-full py-20 bg-white"
+              >
+                <div className="max-w-7xl mx-auto px-6 text-center">
+                  <h2 className="text-4xl font-bold mb-6">
+                    Why <span className="text-theme">DiGiFaMaR</span>?
+                  </h2>
+
+                  <p className="text-gray-600 max-w-2xl mx-auto mb-12">
+                    A digital marketplace designed to connect farmers directly
+                    with buyers while ensuring transparency and secure
+                    transactions.
+                  </p>
+
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div className="bg-gray-50 p-8 rounded-xl shadow hover:shadow-lg transition">
+                      <div className="bg-softTheme w-14 h-14 flex items-center justify-center rounded-lg mx-auto mb-4">
+                        <FontAwesomeIcon
+                          icon={faCheck}
+                          className="text-theme text-2xl"
+                        />
                       </div>
-                      <img
-                        src={logo}
-                        className="w-[250px] sm:w-[300px]  border-1 border-theme rounded-lg shadow-md"
-                        style={{ objectFit: "cover" }}
-                      />
+                      <h3 className="text-xl font-semibold mb-2">
+                        Direct Trade
+                      </h3>
+                      <p className="text-gray-600">
+                        Buyers purchase directly from farmers without
+                        unnecessary middlemen.
+                      </p>
                     </div>
 
-                    <div className="relative w-full sm:w-1/4 flex sm:flex-col-reverse items-center justify-center">
-                      <div className="flex flex-col items-start my-4">
-                        <div
-                          className=" px-4 py-0 text-theme rounded-lg   font-bold"
-                          // style={{ color: "#EBEA1C" }}
-                        >
-                          Name Name
-                        </div>
-                        <div
-                          className="mt-1 ml-4"
-                          style={{ fontWeight: "600" }}
-                        >
-                          Position
-                        </div>
+                    <div className="bg-gray-50 p-8 rounded-xl shadow hover:shadow-lg transition">
+                      <div className="bg-softTheme w-14 h-14 flex items-center justify-center rounded-lg mx-auto mb-4">
+                        <FontAwesomeIcon
+                          icon={faCheck}
+                          className="text-theme text-2xl"
+                        />
                       </div>
-                      <img
-                        src={logo}
-                        className="w-[250px] sm:w-[300px]  border-1 border-theme rounded-lg shadow-md"
-                        style={{ objectFit: "cover" }}
-                      />
+                      <h3 className="text-xl font-semibold mb-2">
+                        Real-Time Inventory Updates
+                      </h3>
+                      <p className="text-gray-600">
+                        Real-time inventory updates.
+                      </p>
                     </div>
 
-                    <div className="relative w-full sm:w-1/4 flex sm:flex-col-reverse items-center justify-center">
-                      <div className="flex flex-col items-start my-4">
-                        <div
-                          className=" px-4 py-0 text-theme rounded-lg   font-bold"
-                          // style={{ color: "#EBEA1C" }}
-                        >
-                          Name Name
-                        </div>
-                        <div
-                          className="mt-1 ml-4"
-                          style={{ fontWeight: "600" }}
-                        >
-                          Position
-                        </div>
+                    <div className="bg-gray-50 p-8 rounded-xl shadow hover:shadow-lg transition">
+                      <div className="bg-softTheme w-14 h-14 flex items-center justify-center rounded-lg mx-auto mb-4">
+                        <FontAwesomeIcon
+                          icon={faCheck}
+                          className="text-theme text-2xl"
+                        />
                       </div>
-                      <img
-                        src={logo}
-                        className="w-[250px] sm:w-[300px]  border-1 border-theme rounded-lg shadow-md"
-                        style={{ objectFit: "cover" }}
-                      />
+                      <h3 className="text-xl font-semibold mb-2">
+                        Fair Pricing and Transparent Transactions
+                      </h3>
+                      <p className="text-gray-600">
+                        Transparent pricing and no hidden fees.
+                      </p>
                     </div>
 
-                    <div className="relative w-full sm:w-1/4 flex sm:flex-col-reverse items-center justify-center">
-                      <div className="flex flex-col items-start my-4">
-                        <div
-                          className=" px-4 py-0 text-theme rounded-lg   font-bold"
-                          // style={{ color: "#EBEA1C" }}
-                        >
-                          Name Name
-                        </div>
-                        <div
-                          className="mt-1 ml-4"
-                          style={{ fontWeight: "600" }}
-                        >
-                          Position
-                        </div>
+                    <div className="bg-gray-50 p-8 rounded-xl shadow hover:shadow-lg transition">
+                      <div className="bg-softTheme w-14 h-14 flex items-center justify-center rounded-lg mx-auto mb-4">
+                        <FontAwesomeIcon
+                          icon={faCheck}
+                          className="text-theme text-2xl"
+                        />
                       </div>
-                      <img
-                        src={logo}
-                        className="w-[250px] sm:w-[300px]  border-1 border-theme rounded-lg shadow-md"
-                        style={{ objectFit: "cover" }}
-                      />
+                      <h3 className="text-xl font-semibold mb-2">
+                        Secure Payments
+                      </h3>
+                      <p className="text-gray-600">
+                        Escrow-based payments ensure safety for both buyers and
+                        farmers.
+                      </p>
+                    </div>
+
+                    <div className="bg-gray-50 p-8 rounded-xl shadow hover:shadow-lg transition">
+                      <div className="bg-softTheme w-14 h-14 flex items-center justify-center rounded-lg mx-auto mb-4">
+                        <FontAwesomeIcon
+                          icon={faCheck}
+                          className="text-theme text-2xl"
+                        />
+                      </div>
+                      <h3 className="text-xl font-semibold mb-2">
+                        Nationwide Access
+                      </h3>
+                      <p className="text-gray-600">
+                        Whether you're in California or New York, connect with
+                        farmers and buyers across all 50 states.
+                      </p>
+                    </div>
+
+                    <div className="bg-gray-50 p-8 rounded-xl shadow hover:shadow-lg transition">
+                      <div className="bg-softTheme w-14 h-14 flex items-center justify-center rounded-lg mx-auto mb-4">
+                        <FontAwesomeIcon
+                          icon={faCheck}
+                          className="text-theme text-2xl"
+                        />
+                      </div>
+                      <h3 className="text-xl font-semibold mb-2">
+                        Join our growing network of U.S. farmers
+                      </h3>
+                      <p className="text-gray-600">
+                        Start transforming your agricultural business today.
+                      </p>
                     </div>
                   </div>
                 </div>
               </motion.div>
+
+              {/* Process Section */}
+              <motion.div
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.7 }}
+                className="w-full py-20"
+              >
+                {/* Title */}
+                <div className="text-center mb-12">
+                  <h2 className="text-4xl font-bold mb-2">How It Works</h2>
+                  <p className="text-gray-600">
+                    Secure Escrow System — From payment to delivery, every
+                    transaction is protected
+                  </p>
+                </div>
+
+                {/* Steps */}
+                <div className="flex flex-wrap justify-center items-start gap-4">
+                  {[
+                    {
+                      title: "Buyer Pays",
+                      text: "Buyer completes payment for the order. Funds are securely held in escrow.",
+                    },
+                    {
+                      title: "Buyer Receives Code",
+                      text: "A unique 6-digit verification code is sent to the buyer's phone via SMS.",
+                    },
+                    {
+                      title: "Farmer Delivers",
+                      text: "Farmer packs and delivers the fresh produce to the buyer's location.",
+                    },
+                    {
+                      title: "Buyer Confirms",
+                      text: "Buyer inspects and confirms receipt of the products.",
+                    },
+                    {
+                      title: "Release Code Sent",
+                      text: "Once confirmed, a unique release code is sent to the buyer's phone.",
+                    },
+                    {
+                      title: "Farmer Enters Code",
+                      text: "Farmer enters the release code provided by the buyer to unlock funds.",
+                    },
+                    {
+                      title: "Funds Released",
+                      text: "Payment is released to the farmer's account. Transaction complete!",
+                    },
+                  ].map((step, index) => (
+                    <div key={index} className="flex items-center">
+                      {/* Card */}
+                      <div className="w-[200px] h-[240px] bg-white border rounded-xl p-6 shadow-sm flex flex-col">
+                        <div className="w-10 h-10 bg-green-500 text-white flex items-center justify-center rounded-lg font-bold mb-4">
+                          {index + 1}
+                        </div>
+
+                        <h3 className="font-semibold mb-2">{step.title}</h3>
+
+                        <p className="text-sm text-gray-600">{step.text}</p>
+                      </div>
+
+                      {/* Arrow */}
+                      {index !== 6 && (
+                        <FontAwesomeIcon
+                          icon={faArrowRight}
+                          className="mx-3 text-green-500"
+                        />
+                      )}
+                    </div>
+                  ))}
+                </div>
+
+                {/* Delivery Info Boxes */}
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16">
+                  {/* 24 hour */}
+                  <div className="bg-orange-50 border border-orange-200 rounded-xl p-6">
+                    <div className="flex items-center mb-3">
+                      <div className="bg-orange-500 text-white p-3 rounded-lg mr-3">
+                        <FontAwesomeIcon icon={faClock} />
+                      </div>
+
+                      <h3 className="font-semibold text-lg">
+                        Projected 24-Hour Local Delivery
+                      </h3>
+                    </div>
+
+                    <p className="text-sm text-gray-700">
+                      Using geolocation, DiGiFaMaR automatically connects buyers
+                      with farmers in their area. Projected 98% of local
+                      perishable deliveries completed within 24 hours
+                      post-launch; standard non-perishable or distant deliveries
+                      within 48 hours.
+                    </p>
+                  </div>
+
+                  {/* 48 hour */}
+                  <div className="bg-blue-50 border border-blue-200 rounded-xl p-6">
+                    <div className="flex items-center mb-3">
+                      <div className="bg-blue-500 text-white p-3 rounded-lg mr-3">
+                        <FontAwesomeIcon icon={faClock} />
+                      </div>
+
+                      <h3 className="font-semibold text-lg">
+                        48-Hour Standard
+                      </h3>
+                    </div>
+
+                    <p className="text-sm text-gray-700">
+                      Standard non-perishable items and orders from distant
+                      farms delivered within 48 hours post-launch. Track your
+                      order in real-time.
+                    </p>
+                  </div>
+
+                  {/* 72 hour */}
+                  <div className="bg-red-50 border border-red-200 rounded-xl p-6">
+                    <div className="flex items-center mb-3">
+                      <div className="bg-red-500 text-white p-3 rounded-lg mr-3">
+                        <FontAwesomeIcon icon={faRotateLeft} />
+                      </div>
+
+                      <h3 className="font-semibold text-lg">
+                        72-Hour Refund Trigger
+                      </h3>
+                    </div>
+
+                    <p className="text-sm text-gray-700">
+                      Refund triggers if delivery exceeds 72 hours without buyer
+                      confirmation. Full refund processed within 24 hours after
+                      problem assessment and verification.
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* CTA Section */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.7 }}
+                className="w-full bg-gray-900 text-white rounded-2xl px-6 md:px-12 py-16 flex flex-col items-center justify-center gap-6 my-20"
+              >
+                <h2 className="text-3xl md:text-4xl font-bold text-center">
+                  Ready to Get Started?
+                </h2>
+                <p className="text-gray-300 text-lg text-center">
+                  Start selling or buying fresh produce today
+                </p>
+
+                <div className="flex flex-col sm:flex-row gap-4 mt-6">
+                  {/* Start Escrow Transaction */}
+                  <button className="flex items-center justify-center gap-2 bg-green-500 hover:bg-green-600 transition text-white font-semibold px-6 py-3 rounded-lg">
+                    Start Escrow Transaction
+                    <FontAwesomeIcon icon={faShieldAlt} />
+                  </button>
+
+                  {/* Contact Sales */}
+                  <button className="flex items-center justify-center gap-2 bg-gray-800 hover:bg-gray-700 transition text-white font-semibold px-6 py-3 rounded-lg">
+                    Contact Sales
+                    <FontAwesomeIcon icon={faPhone} />
+                  </button>
+                </div>
+              </motion.div>
+
+              {/* Marketplace Preview */}
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+                className="py-20 bg-gray-100"
+              >
+                <div className="max-w-7xl mx-auto px-6">
+                  <h2 className="text-4xl font-bold text-center mb-12">
+                    Fresh Produce{" "}
+                    <span className="text-theme">Marketplace</span>
+                  </h2>
+
+                  <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+                    {[1, 2, 3, 4].map((item) => (
+                      <div
+                        key={item}
+                        className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition"
+                      >
+                        <div className="h-40 bg-gray-200"></div>
+
+                        <div className="p-4">
+                          <h3 className="font-semibold">Product Name</h3>
+                          <p className="text-sm text-gray-600">Farmer Name</p>
+
+                          <div className="mt-3 text-theme font-bold">
+                            ₦ Price
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </motion.div>
+
+              
+
+              {/* How it works */}
+              <section className="py-20 bg-white">
+                <div className="max-w-6xl mx-auto text-center px-6">
+                  <h2 className="text-4xl font-bold mb-12">
+                    How <span className="text-theme">DiGiFaMaR</span> Works
+                  </h2>
+
+                  <div className="grid md:grid-cols-3 gap-10">
+                    <div>
+                      <div className="text-3xl font-bold text-theme mb-2">
+                        1
+                      </div>
+                      <p>Farmers list their products.</p>
+                    </div>
+
+                    <div>
+                      <div className="text-3xl font-bold text-theme mb-2">
+                        2
+                      </div>
+                      <p>Buyers place secure orders.</p>
+                    </div>
+
+                    <div>
+                      <div className="text-3xl font-bold text-theme mb-2">
+                        3
+                      </div>
+                      <p>Delivery and escrow release payment.</p>
+                    </div>
+                  </div>
+                </div>
+              </section>
 
               {/* TMF IMPACT STATS */}
               <motion.div
@@ -498,8 +757,7 @@ export default function HomePage({
 
                   <div className="relative z-10 text-center">
                     <h2 className="text-4xl font-bold text-black mb-6">
-                      DiGiFaMaR{" "}
-                      <span className="text-theme">Title</span>
+                      DiGiFaMaR <span className="text-theme">Title</span>
                     </h2>
 
                     <p className="text-lg text-gray-700 max-w-3xl mx-auto mb-8">
@@ -524,9 +782,7 @@ export default function HomePage({
                       </div>
 
                       <div
-                        onClick={() =>
-                          navigate("/create-farmer-with-email")
-                        }
+                        onClick={() => navigate("/create-farmer-with-email")}
                         className="cursor-pointer px-6 py-3 border-2 border-theme text-theme font-semibold rounded-lg 
                         hover:text-white hover:bg-softTheme transition duration-300 ease-in-out"
                       >

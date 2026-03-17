@@ -971,7 +971,7 @@ export default function HomePage({
                       <div className=" w-14 h-14 flex flex-col items-center  rounded-full ">
                         <FontAwesomeIcon
                           icon={faHandshake}
-                          className="text-theme text-2xl"
+                          className="text-theme text-3xl"
                         />
                         <p className="text-black font-semibold mt-2">
                           Vegetables
@@ -983,7 +983,7 @@ export default function HomePage({
                       <div className=" w-14 h-14 flex flex-col items-center justify-center rounded-full ">
                         <FontAwesomeIcon
                           icon={faHandshake}
-                          className="text-theme text-2xl"
+                          className="text-theme text-3xl"
                         />
                         <p className="text-black font-semibold mt-2">Fruits</p>
                       </div>
@@ -993,7 +993,7 @@ export default function HomePage({
                       <div className=" w-14 h-14 flex flex-col items-center justify-center rounded-full ">
                         <FontAwesomeIcon
                           icon={faHandshake}
-                          className="text-theme text-2xl"
+                          className="text-theme text-3xl"
                         />
                         <p className="text-black font-semibold mt-2">Grains</p>
                       </div>
@@ -1003,7 +1003,7 @@ export default function HomePage({
                       <div className=" w-14 h-14 flex flex-col items-center justify-center rounded-full ">
                         <FontAwesomeIcon
                           icon={faHandshake}
-                          className="text-theme text-2xl"
+                          className="text-theme text-3xl"
                         />
                         <p className="text-black font-semibold mt-2">
                           Livestock
@@ -1015,7 +1015,7 @@ export default function HomePage({
                       <div className=" w-14 h-14 flex flex-col items-center justify-center rounded-full ">
                         <FontAwesomeIcon
                           icon={faHandshake}
-                          className="text-theme text-2xl"
+                          className="text-theme text-3xl"
                         />
                         <p className="text-black font-semibold mt-2">Dairy</p>
                       </div>
@@ -1025,7 +1025,7 @@ export default function HomePage({
                       <div className=" w-14 h-14 flex flex-col items-center justify-center rounded-full ">
                         <FontAwesomeIcon
                           icon={faHandshake}
-                          className="text-theme text-2xl"
+                          className="text-theme text-3xl"
                         />
                         <p className="text-black font-semibold mt-2">Poultry</p>
                       </div>

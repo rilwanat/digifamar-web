@@ -295,7 +295,7 @@ export default function HomePage({
               // }}
             >
               {/* First Section */}
-              <div className="my-10 rounded-xl overflow-hidden">
+              <div className="mt-10 rounded-xl overflow-hidden">
                 <img
                   src={man}
                   alt="example"

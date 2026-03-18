@@ -53,58 +53,58 @@ function DgfFooter({ gotoPage }) {
               League of{" "}
             </p> */}
             <p className="text-white text-sm">
-              Together, we ....
+              DiGiFaMaR™ - Trade directly with farmers nationwide through DiGiFaMaR™ - fresh produce, fair prices.
             </p>
             <div className="flex my-4">
               <div
               // className="relative z-20"
               >
                 <ul className="flex">
-                  <li className="bg-theme rounded-md p-1 mr-4 hover:bg-softTheme hover:text-white text-white cursor-pointer">
+                  {/* <li className="bg-theme rounded-md p-1 mr-4 hover:bg-softTheme hover:text-white text-white cursor-pointer">
                     <a href="https://www.facebook.com" target="_blank">
                       <FontAwesomeIcon icon={faFacebookF} className="" />
                     </a>
-                  </li>
+                  </li> */}
                   <li className="bg-theme rounded-md p-1 mr-4 hover:bg-softTheme hover:text-white text-white cursor-pointer">
-                    <a href="https://www.x.com" target="_blank">
+                    <a href="https://www.x.com/DiGiFaMaR" target="_blank">
                       <FontAwesomeIcon icon={faXTwitter} className="" />
                     </a>
                   </li>
                   <li className="bg-theme rounded-md p-1 mr-4 hover:bg-softTheme hover:text-white text-white cursor-pointer">
-                    <a href="https://www.instagram.com" target="_blank">
+                    <a href="https://www.instagram.com/digifamar" target="_blank">
                       <FontAwesomeIcon icon={faInstagram} className="" />
                     </a>
                   </li>
-                  <li className="bg-theme rounded-md p-1 mr-4 hover:bg-softTheme hover:text-white text-white cursor-pointer">
+                  {/* <li className="bg-theme rounded-md p-1 mr-4 hover:bg-softTheme hover:text-white text-white cursor-pointer">
                     <a href="https://www.linkedin.com" target="_blank">
                       <FontAwesomeIcon icon={faLinkedinIn} className="" />
                     </a>
-                  </li>
-                  <li className="bg-theme rounded-md p-1 mr-4 hover:bg-softTheme hover:text-white text-white cursor-pointer">
+                  </li> */}
+                  {/* <li className="bg-theme rounded-md p-1 mr-4 hover:bg-softTheme hover:text-white text-white cursor-pointer">
                     <a href="https://www.tiktok.com" target="_blank">
                       <FontAwesomeIcon icon={faTiktok} className="" />
                     </a>
-                  </li>
-                  <li className="bg-theme rounded-md p-1 mr-4 hover:bg-softTheme hover:text-white text-white cursor-pointer">
+                  </li> */}
+                  {/* <li className="bg-theme rounded-md p-1 mr-4 hover:bg-softTheme hover:text-white text-white cursor-pointer">
                     <a href="https://youtube.com" target="_blank">
                       <FontAwesomeIcon icon={faYoutube} className="" />
                     </a>
-                  </li>
-                  <li className="bg-theme rounded-md p-1 mr-4 hover:bg-softTheme hover:text-white text-white cursor-pointer">
+                  </li> */}
+                  {/* <li className="bg-theme rounded-md p-1 mr-4 hover:bg-softTheme hover:text-white text-white cursor-pointer">
                     <a href="https://www.telegram.com/" target="_blank">
                       <FontAwesomeIcon icon={faTelegram} className="" />
                     </a>
-                  </li>
-                  <li className="bg-theme rounded-md p-1 mr-4 hover:bg-softTheme hover:text-white text-white cursor-pointer">
+                  </li> */}
+                  {/* <li className="bg-theme rounded-md p-1 mr-4 hover:bg-softTheme hover:text-white text-white cursor-pointer">
                     <a href="https://www.whatsapp.com/" target="_blank">
                       <FontAwesomeIcon icon={faWhatsapp} className="" />
                     </a>
-                  </li>
+                  </li> */}
                 </ul>
               </div>
             </div>
             <div className="flex flex-col">
-              <span
+              {/* <span
                 className="text-white text-sm cursor-pointer block mb-2 
               hover:text-softTheme hover:bg-theme
               "
@@ -113,7 +113,7 @@ function DgfFooter({ gotoPage }) {
                 }}
               >
                 Phone: +1 111 111 1111
-              </span>
+              </span> */}
               <span
                 className="text-white text-sm cursor-pointer block mb-2 
               hover:text-softTheme hover:bg-theme
@@ -122,17 +122,27 @@ function DgfFooter({ gotoPage }) {
                   // window.location.href = "mailto:info@.com";
                 }}
               >
-                Email: info@.com
+                Email: support@digifamar.com
               </span>
-              <span
+              {/* <span
                 className="text-white text-sm cursor-pointer block mb-2"
                 onClick={() => {
-                  /* Handle navigation */
+                  
                 }}
               >
                 Address: <br />
                 No 1, One Street II,<br />
                 Province, State, Country.
+              </span> */}
+              <span
+                className="text-white text-sm cursor-pointer block mb-2 
+              hover:text-softTheme hover:bg-theme
+              "
+                onClick={() => {
+                  // window.location.href = "mailto:info@.com";
+                }}
+              >
+                Website: www.digifamar.com
               </span>
             </div>
           </div>
@@ -147,7 +157,7 @@ function DgfFooter({ gotoPage }) {
             </p>
             <p
               onClick={() => {
-                // navigate("/");
+                navigate("/");
               }}
               className="text-white text-sm mb-2 cursor-pointer hover:text-softTheme"
               style={{ color: "" }}
@@ -163,42 +173,6 @@ function DgfFooter({ gotoPage }) {
             >
               About Us
             </p>
-            {/* <p
-              onClick={() => {
-                // navigate("/events");
-              }}
-              className="text-red-500 white text-sm mb-2 cursor-pointer hover:text-softTheme"
-              style={{ color: "" }}
-            >
-              Events
-            </p> */}
-            {/* <p
-              onClick={() => {
-                // navigate("/publications");
-              }}
-              className="text-red-500 white text-sm mb-2 cursor-pointer hover:text-softTheme"
-              style={{ color: "" }}
-            >
-              Newsletters
-            </p> */}
-            {/* <p
-              onClick={() => {
-                // navigate("/publications");
-              }}
-              className="text-red-500 white text-sm mb-2 cursor-pointer hover:text-softTheme"
-              style={{ color: "" }}
-            >
-              Gallery
-            </p> */}
-            {/* <p
-              onClick={() => {
-                navigate("/donations");
-              }}
-              className="text-white text-sm mb-2 cursor-pointer hover:text-softTheme"
-              style={{ color: "" }}
-            >
-              Donations
-            </p> */}
             <p
               onClick={() => {
                 navigate("/contact-us");
@@ -234,7 +208,7 @@ function DgfFooter({ gotoPage }) {
       <div className="mt-auto bg-theme">
         <div className="bottom-0 w-full text-center">
           <p className="text-xs py-2">
-            &copy; 2026 DiGiFaMar. All rights reserved.
+            &copy; 2026 DiGiFaMar™. All rights reserved.
           </p>
         </div>
       </div>

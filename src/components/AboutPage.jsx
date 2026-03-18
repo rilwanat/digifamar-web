@@ -46,6 +46,8 @@ import {
   faDollarSign,
   faShield,
   faMap,
+  faMobileAlt,
+  faUserPlus,
 } from "@fortawesome/free-solid-svg-icons";
 
 import NotificationModal from "./modals/NotificationModal.jsx";
@@ -345,7 +347,7 @@ export default function AboutPage({
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
-                className="py-20"
+                className="py-10"
               >
                 <div className="text-center mb-16">
                   <div className="flex gap-2 items-center my-2 rounded-4xl bg-softerTheme px-6 py-2 w-max mx-auto mb-6">
@@ -460,6 +462,50 @@ export default function AboutPage({
                     </ul>
                   </div>
                 </div>
+
+                {/* --- Image Gallery & Join Section --- */}
+                <div className="flex flex-col items-center py-12 px-6">
+                  {/* Image Cards Grid */}
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-7xl mb-12">
+                    {[
+                      { img: man, text: "Farm Fresh" },
+                      { img: man, text: "Growing Strong" },
+                      { img: man, text: "Fresh Harvest" },
+                    ].map((item, index) => (
+                      <motion.div
+                        key={index}
+                        whileHover={{ scale: 1.002 }}
+                        transition={{ duration: 0.3 }}
+                        className="relative h-64 rounded-2xl overflow-hidden shadow-lg cursor-pointer group"
+                      >
+                        <img
+                          src={item.img}
+                          alt={item.text}
+                          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                        />
+                        {/* Dark overlay for text readability */}
+                        <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300" />
+
+                        {/* Bottom Left Text */}
+                        <div className="absolute bottom-4 left-6">
+                          <p className="text-white font-bold text-lg drop-shadow-md">
+                            {item.text}
+                          </p>
+                        </div>
+                      </motion.div>
+                    ))}
+                  </div>
+
+                  {/* Join Button */}
+                  <button
+                    // whileHover={{ scale: 1.05 }}
+                    // whileTap={{ scale: 0.95 }}
+                    className="bg-theme text-white px-8 py-4 rounded-2xl font-bold flex items-center gap-3 shadow-lg shadow-green-900/20 hover:bg-green-700 transition-colors cursor-pointer"
+                  >
+                    <FontAwesomeIcon icon={faUserPlus} className="text-lg" />
+                    Join Farmers Today
+                  </button>
+                </div>
               </motion.div>
 
               {/* --- Farmer Benefits Section --- */}
@@ -467,7 +513,7 @@ export default function AboutPage({
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="py-20"
+                className="py-10"
               >
                 <div className="text-center mb-12">
                   <div className="flex gap-2 items-center my-2 rounded-4xl bg-blue-50 px-6 py-2 w-max mx-auto mb-6">
@@ -558,6 +604,32 @@ export default function AboutPage({
                       </button>
                     </div>
                   ))}
+                </div>
+
+                <div className="flex items-center justify-center my-8 gap-4">
+                  {/* Join Button */}
+                  <button
+                    // whileHover={{ scale: 1.05 }}
+                    // whileTap={{ scale: 0.95 }}
+                    className="bg-blue-600 text-white px-8 py-4 rounded-2xl font-bold flex items-center gap-3 shadow-lg shadow-green-900/20 hover:bg-green-700 transition-colors cursor-pointer"
+                  >
+                    <FontAwesomeIcon icon={faUserPlus} className="text-lg" />
+                    Join Farmers
+                  </button>
+
+                  |
+
+                  {/* Join Button */}
+                  <button
+                    // whileHover={{ scale: 1.05 }}
+                    // whileTap={{ scale: 0.95 }}
+                    className="bg-white text-blue-600 px-8 py-4 rounded-2xl font-bold flex items-center gap-3 border-2 border-blue-600 shadow-lg shadow-green-900/20 hover:bg-green-700 transition-colors cursor-pointer"
+                  >
+                    {/* <FontAwesomeIcon icon={faUserPlus} className="text-lg" /> */}
+                    Browse Market
+                    <FontAwesomeIcon icon={faArrowRight} className="text-lg" />
+                  </button>
+
                 </div>
               </motion.div>
             </div>

@@ -92,12 +92,12 @@ export default function DgfHeaderHead({ gotoPage }) {
         <div className="text-center w-full">
           <div className="flex items-center z-50" style={{ height: "64px" }}>
             <div
-              className="cursor-pointer ml-28 mx-4"
+              className="cursor-pointer ml-32 mx-4"
               onClick={() => {
                 navigate("/");
               }}
             >
-              <p className="text-sm cursor-pointer font-semibold text-theme">
+              <p className="text-sm cursor-pointer text-gray-500">
                 Home
               </p>
             </div>
@@ -108,8 +108,8 @@ export default function DgfHeaderHead({ gotoPage }) {
                 navigate("/about-us");
               }}
             >
-              <p className="text-sm cursor-pointer font-semibold text-theme">
-                About
+              <p className="text-sm cursor-pointer text-gray-500">
+                About DiGiFaMaR™
               </p>
             </div>
 
@@ -173,7 +173,7 @@ export default function DgfHeaderHead({ gotoPage }) {
                 navigate("/contact-us");
               }}
             >
-              <p className="text-sm cursor-pointer font-semibold text-theme">
+              <p className="text-sm cursor-pointer text-gray-500">
                 Contact
               </p>
             </div>

@@ -663,15 +663,16 @@ export default function HomePage({
                 transition={{ duration: 0.6 }}
                 className="w-full py-20 "
               >
-                <div className="flex gap-1 items-center my-2 rounded-4xl bg-gray-100 px-6 py-4 w-max mx-auto mb-6">
+                <div className="flex gap-2 items-center my-2 rounded-4xl bg-gray-100 px-6 py-2 w-max mx-auto mb-6">
                   <FontAwesomeIcon
                     icon={faLocationDot}
                     className="text-theme"
                   />
-                  <p className="text-sm font-bold text-theme">
+                  <span className="text-sm font-bold text-theme leading-none">
                     SMART GEOLOCATION
-                  </p>
+                  </span>
                 </div>
+
                 <div className="max-w-7xl mx-auto px-6">
                   <h2 className="text-4xl font-bold mb-6 text-center">
                     Find Nearby Farmers,{" "}

@@ -55,6 +55,9 @@ import {
   faMobileAlt,
   faUserPlus,
   faInfo,
+  faCreditCard,
+  faBank,
+  faLock,
 } from "@fortawesome/free-solid-svg-icons";
 
 import NotificationModal from "./modals/NotificationModal.jsx";
@@ -161,7 +164,7 @@ export default function MarketPage({
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
-                className="py-10 relative left-1/2 right-1/2 -mx-[50vw] w-screen bg-theme/30 -mt-4"
+                className="py-10 relative left-1/2 right-1/2 -mx-[50vw] w-screen bg-theme/10 -mt-4"
               >
                 <div className="text-center mb-0">
                   <h2 className="text-4xl font-bold">
@@ -359,14 +362,14 @@ export default function MarketPage({
                   <p className="text-gray-500 mt-4 max-w-2xl mx-auto">
                     Fresh produce delivered across all 50 states. DiGiFaMaR uses
                     geolocation to connect you with nearby farmers for the
-                    fastest delivery—most local orders arrive within 24 hours.
+                    fastest delivery-most local orders arrive within 24 hours.
                   </p>
                 </div>
 
                 {/* Image Cards */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
-                  <div className="relative   rounded-4xl overflow-hidden shadow-xl  border border-gray-200">
-                    <div className="bg-green-50 rounded-xl p-8  h-full">
+                  <div className="relative   rounded-4xl overflow-hidden shadow-xl  border border-gray-200 hover:bg-green-500">
+                    <div className="bg-green-50 p-8  h-full">
                       <div className="flex items-start mb-3">
                         <div className="bg-green-500 text-white p-3 rounded-lg mr-4">
                           <FontAwesomeIcon icon={faClock} />
@@ -389,8 +392,8 @@ export default function MarketPage({
                     </div>
                   </div>
 
-                  <div className="relative  rounded-4xl overflow-hidden shadow-xl  border border-gray-200">
-                    <div className="bg-orange-50 rounded-xl p-8  h-full">
+                  <div className="relative  rounded-4xl overflow-hidden shadow-xl  border border-gray-200 hover:bg-orange-500">
+                    <div className="bg-orange-50 p-8  h-full">
                       <div className="flex items-start mb-3">
                         <div className="bg-orange-500 text-white p-3 rounded-lg mr-4">
                           <FontAwesomeIcon icon={faClock} />
@@ -499,6 +502,74 @@ export default function MarketPage({
                       <FontAwesomeIcon icon={faUserPlus} className="text-lg" />
                       Become A Farmers Today
                     </motion.button>
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* --- Ready to Checkout Section --- */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, ease: "easeOut" }}
+                className="w-full bg-theme bg-linear-to-br from-theme to-theme text-white py-10 px-6 mb-10 rounded-4xl shadow-2xl"
+              >
+                <div className="max-w-4xl mx-auto flex flex-col items-center text-center">
+                  {/* Large Cart Icon */}
+                  <div className="bg-white/30 w-24 h-24 rounded-3xl flex items-center justify-center mb-8 shadow-inner">
+                    <FontAwesomeIcon
+                      icon={faCartShopping}
+                      className="text-white text-5xl"
+                    />
+                  </div>
+
+                  {/* Title */}
+                  <h2 className="text-4xl md:text-5xl font-extrabold mb-5 tracking-tight">
+                    Ready to <span className="text-orange">Checkout?</span>
+                  </h2>
+
+                  {/* Subtitle */}
+                  <p className="text-white/90 text-lg mb-12 font-medium leading-relaxed max-w-2xl">
+                    Secure checkout powered by Escrow.com. Your payment is
+                    protected until you receive your fresh produce – buy with
+                    confidence from farmers nationwide!
+                  </p>
+
+                  {/* Main Yellow Button */}
+                  <motion.button
+                    // whileHover={{ scale: 1.05, backgroundColor: "#e6c200" }}
+                    // whileTap={{ scale: 0.95 }}
+                    className="bg-orange text-black px-10 py-4 rounded-2xl font-bold flex items-center gap-3 shadow-2xl shadow-green-950/30 transition-all duration-300 cursor-pointer text-lg mb-20"
+                  >
+                    <FontAwesomeIcon
+                      icon={faCartShopping}
+                      className="text-xl"
+                    />
+                    View Cart & Checkout
+                    <FontAwesomeIcon
+                      icon={faArrowRight}
+                      className="text-sm ml-1"
+                    />
+                  </motion.button>
+
+                  {/* Bottom Payment Methods Grid */}
+                  <div className="grid grid-cols-2 md:grid-cols-4 gap-4 w-full max-w-3xl">
+                    {[
+                      { icon: faCreditCard, text: "Card Payments" },
+                      { icon: faBank, text: "Bank Transfer" },
+                      { icon: faShieldAlt, text: "Escrow Protected" },
+                      { icon: faLock, text: "100% Secure" },
+                    ].map((method, index) => (
+                      <div
+                        key={index}
+                        className="bg-white/30 backdrop-blur-sm border border-white/10 px-6 py-3 rounded-full flex items-center justify-center gap-3"
+                      >
+                        {/* <FontAwesomeIcon icon={method.icon} className="text-white text-sm" /> */}
+                        <p className="text-white text-xs font-semibold whitespace-nowrap">
+                          {method.text}
+                        </p>
+                      </div>
+                    ))}
                   </div>
                 </div>
               </motion.div>

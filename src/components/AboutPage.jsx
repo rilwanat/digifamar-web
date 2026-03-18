@@ -573,7 +573,7 @@ export default function AboutPage({
                     },
                     {
                       title: "Easy Digital Tools",
-                      desc: "List products, manage orders, and communicate with buyers—all from your smartphone.",
+                      desc: "List products, manage orders, and communicate with buyers-all from your smartphone.",
                       icon: faPhone,
                       color: "bg-cyan-500",
                       light: "bg-cyan-50",

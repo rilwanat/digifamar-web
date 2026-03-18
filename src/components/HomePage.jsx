@@ -45,6 +45,8 @@ import {
   faDollarSign,
   faShield,
   faMap,
+  faUserPlus,
+  // faGooglePlay,
 } from "@fortawesome/free-solid-svg-icons";
 
 import NotificationModal from "./modals/NotificationModal";
@@ -1033,6 +1035,62 @@ export default function HomePage({
                     </div>
                   </div>
                 </div>
+
+                {/* --- App Store Coming Soon Banner --- */}
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  className="px-6 py-12"
+                >
+                  <div className="max-w-7xl mx-auto rounded-4xl overflow-hidden shadow-2xl bg-linear-to-r from-green via-[#2563eb] to-green py-16 px-8 text-center text-white">
+                    {/* Heading */}
+                    <h2 className="text-3xl md:text-4xl font-bold mb-4 tracking-tight">
+                      10,000+ Products from Verified American Farmers
+                    </h2>
+
+                    {/* Subheading */}
+                    <p className="text-white text-lg mb-10 font-medium">
+                      Mobile App Coming Soon - Browse fresh products on our
+                      website today
+                    </p>
+
+                    {/* App Store Buttons Container */}
+                    <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+                      {/* Google Play Button */}
+                      <div className="bg-white/30 backdrop-blur-md border border-white/20 px-8 py-3 rounded-2xl flex items-center gap-4 w-64 cursor-not-allowed">
+                        <FontAwesomeIcon
+                          // icon={faGooglePlay}
+                          className="text-3xl"
+                        />
+                        <div className="text-left">
+                          <p className="text-[10px] uppercase font-bold opacity-80 leading-none">
+                            Coming Soon
+                          </p>
+                          <p className="text-xl font-bold leading-tight">
+                            Google Play
+                          </p>
+                        </div>
+                      </div>
+
+                      {/* App Store Button */}
+                      <div className="bg-white/30 backdrop-blur-md border border-white/20 px-8 py-3 rounded-2xl flex items-center gap-4 w-64 cursor-not-allowed">
+                        <FontAwesomeIcon
+                          // icon={faApple}
+                          className="text-4xl"
+                        />
+                        <div className="text-left">
+                          <p className="text-[10px] uppercase font-bold opacity-80 leading-none">
+                            Coming Soon
+                          </p>
+                          <p className="text-xl font-bold leading-tight">
+                            App Store
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </motion.div>
               </motion.div>
 
               {/* How it works */}

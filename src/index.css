@@ -31,16 +31,16 @@
 
 /* Disable text selection */
 body {
-    -webkit-user-select: none; /* Safari */
-    -moz-user-select: none; /* Firefox */
-    -ms-user-select: none; /* Internet Explorer/Edge */
-    user-select: none; /* Standard syntax */
+    /*-webkit-user-select: none; /* Safari */
+    /*-moz-user-select: none; /* Firefox */
+    /*-ms-user-select: none; /* Internet Explorer/Edge */
+    /*user-select: none; /* Standard syntax */
   }
 
 
   img {
-    user-select: none; /* Prevent text selection */
-    pointer-events: none; /* Disable click and drag */
+    /*user-select: none; /* Prevent text selection */
+    /*pointer-events: none; /* Disable click and drag */
   }
 
 

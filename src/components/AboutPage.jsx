@@ -132,7 +132,7 @@ export default function AboutPage({
 
       {/* <DgfBanner className="" /> */}
 
-      {/* <Hero /> */}
+      {/* <About /> */}
 
       <div
         className="w-full "
@@ -506,6 +506,9 @@ export default function AboutPage({
                   <button
                     // whileHover={{ scale: 1.05 }}
                     // whileTap={{ scale: 0.95 }}
+                    onClick={() => {
+                      navigate("/create-farmer-with-email");
+                    }}
                     className="bg-theme text-white px-8 py-4 rounded-2xl font-bold flex items-center gap-3 shadow-lg shadow-green-900/20 hover:bg-green-700 transition-colors cursor-pointer"
                   >
                     <FontAwesomeIcon icon={faUserPlus} className="text-lg" />
@@ -617,6 +620,9 @@ export default function AboutPage({
                   <button
                     // whileHover={{ scale: 1.05 }}
                     // whileTap={{ scale: 0.95 }}
+                    onClick={() => {
+                      navigate("/create-farmer-with-email");
+                    }}
                     className="bg-blue-600 text-white px-8 py-4 rounded-2xl font-bold flex items-center gap-3 shadow-lg shadow-green-900/20 hover:bg-green-700 transition-colors cursor-pointer"
                   >
                     <FontAwesomeIcon icon={faUserPlus} className="text-lg" />

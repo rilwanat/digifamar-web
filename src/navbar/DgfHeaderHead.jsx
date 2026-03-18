@@ -105,6 +105,17 @@ export default function DgfHeaderHead({ gotoPage }) {
             <div
               className="cursor-pointer mx-2 hover:text-theme hover:bg-softerTheme px-2 py-2 rounded-lg  text-gray-500"
               onClick={() => {
+                navigate("/market");
+              }}
+            >
+              <p className="text-sm cursor-pointer">
+                Market
+              </p>
+            </div>
+
+            <div
+              className="cursor-pointer mx-2 hover:text-theme hover:bg-softerTheme px-2 py-2 rounded-lg  text-gray-500"
+              onClick={() => {
                 navigate("/about-us");
               }}
             >

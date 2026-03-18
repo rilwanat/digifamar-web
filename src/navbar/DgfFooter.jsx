@@ -2,6 +2,10 @@ import React, { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 
 import logo from "../assets/images/logo-512x512.png";
+import logoi from "../assets/images/logo-512x512-i.png";
+import logoFooter from "../assets/images/logo-footer.png";
+
+
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -37,10 +41,10 @@ function DgfFooter({ gotoPage }) {
         <div className="flex flex-col items-start lg:flex-row lg:items-center lg:justify-between ">
           <div className="flex flex-col lg:items-start lg:w-1/3 my-4 lg:h-40">
             <div className="flex items-center mb-2 rounded-full">
-              <div className="flex p-0.5 bg-white rounded-full">
+              <div className="flex p-0.5  rounded-full">
                 <img
-                  className="block h-20 w-auto max-w-none"
-                  src={logo}
+                  className="block h-16 w-auto max-w-none"
+                  src={logoFooter}
                   alt="Logo"
                   onClick={() => {
                     gotoPage("");
@@ -53,7 +57,7 @@ function DgfFooter({ gotoPage }) {
               League of{" "}
             </p> */}
             <p className="text-white text-sm">
-              DiGiFaMaR™ - Trade directly with farmers nationwide through DiGiFaMaR™ - fresh produce, fair prices.
+              Trade directly with farmers nationwide through DiGiFaMaR™ - fresh produce, fair prices.
             </p>
             <div className="flex my-4">
               <div

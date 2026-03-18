@@ -92,88 +92,34 @@ export default function DgfHeaderHead({ gotoPage }) {
         <div className="text-center w-full">
           <div className="flex items-center z-50" style={{ height: "64px" }}>
             <div
-              className="cursor-pointer ml-32 mx-4"
+              className="cursor-pointer ml-32 mx-4 hover:text-theme hover:bg-softerTheme px-2 py-2 rounded-lg  text-gray-500"
               onClick={() => {
                 navigate("/");
               }}
             >
-              <p className="text-sm cursor-pointer text-gray-500">
+              <p className="text-sm cursor-pointer">
                 Home
               </p>
             </div>
 
             <div
-              className="cursor-pointer mx-4"
+              className="cursor-pointer mx-2 hover:text-theme hover:bg-softerTheme px-2 py-2 rounded-lg  text-gray-500"
               onClick={() => {
                 navigate("/about-us");
               }}
             >
-              <p className="text-sm cursor-pointer text-gray-500">
+              <p className="text-sm cursor-pointer">
                 About DiGiFaMaR™
               </p>
             </div>
 
-            {/* <div
-              className="cursor-pointer mx-4"
-              onClick={() => {
-                navigate("/members");
-              }}
-            >
-              <p className="text-sm cursor-pointer font-semibold">Membership</p>
-            </div> */}
-            {/* <div
-              className="cursor-pointer mx-4"
-              onClick={() => {
-                // navigate("/events");
-              }}
-            >
-              <p className="text-sm cursor-pointer font-semibold text-red-500 white">Events</p>
-            </div> */}
-            {/* <div
-              className="cursor-pointer mx-4"
-              onClick={() => {
-                // navigate("/publications");
-              }}
-            >
-              <p className="text-sm cursor-pointer font-semibold text-red-500  white">
-                Newsletters
-              </p>
-            </div> */}
-            {/* <div
-              className="cursor-pointer mx-4"
-              onClick={() => {
-                // navigate("/media");
-              }}
-            >
-              <p className="text-sm cursor-pointer font-semibold text-red-500  white">Gallery</p>
-            </div> */}
-            {/* <div
-              className="cursor-pointer mx-4"
-              onClick={() => {
-                navigate("/donations");
-              }}
-            >
-              <p className="text-sm cursor-pointer font-semibold text-theme">
-                Donations
-              </p>
-            </div> */}
-            {/* <div
-              className="cursor-pointer mx-4"
-              onClick={() => {
-                // navigate("/membership-requirements");
-              }}
-            >
-              <p className="text-sm cursor-pointer font-semibold text-black">
-                Membership Fee
-              </p>
-            </div> */}
             <div
-              className="cursor-pointer mx-4"
+              className="cursor-pointer mx-2 hover:text-theme hover:bg-softerTheme px-2 py-2 rounded-lg  text-gray-500"
               onClick={() => {
                 navigate("/contact-us");
               }}
             >
-              <p className="text-sm cursor-pointer text-gray-500">
+              <p className="text-sm cursor-pointer">
                 Contact
               </p>
             </div>

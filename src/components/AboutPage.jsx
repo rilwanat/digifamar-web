@@ -21,6 +21,12 @@ import logoFull from "../assets/images/logo-512x512.png"; //logo-full-h768.png";
 import background from "../assets/images/background2.png";
 
 import man from "../assets/images/man.jpg";
+import farm from "../assets/images/farm.jpg";
+import farm1 from "../assets/images/farm1.jpg";
+import farm2 from "../assets/images/farm2.jpg";
+import farm3 from "../assets/images/farm3.jpg";
+import farm4 from "../assets/images/farm4.jpg";
+import farm5 from "../assets/images/farm5.jpg";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -269,9 +275,9 @@ export default function AboutPage({
 
                   <div className="relative h-64 md:h-80 rounded-3xl overflow-hidden shadow-2xl">
                     <img
-                      src={man}
+                      src={farm}
                       alt="Mission"
-                      className="w-full h-full object-cover brightness-50"
+                      className="w-full h-full object-cover brightness-80"
                     />
                     <div className="absolute inset-0 flex items-center justify-center p-6">
                       <h3 className="text-white text-2xl md:text-4xl font-bold text-center ">
@@ -375,7 +381,7 @@ export default function AboutPage({
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
                   <div className="relative h-64 md:h-80 rounded-4xl overflow-hidden shadow-xl group">
                     <img
-                      src={man}
+                      src={farm1}
                       alt="Real American Farmers"
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                     />
@@ -390,7 +396,7 @@ export default function AboutPage({
                   </div>
                   <div className="relative h-64 md:h-80 rounded-4xl overflow-hidden shadow-xl group">
                     <img
-                      src={man}
+                      src={farm2}
                       alt="Modern Agriculture"
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                     />
@@ -468,15 +474,15 @@ export default function AboutPage({
                   {/* Image Cards Grid */}
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-7xl mb-12">
                     {[
-                      { img: man, text: "Farm Fresh" },
-                      { img: man, text: "Growing Strong" },
-                      { img: man, text: "Fresh Harvest" },
+                      { img: farm3, text: "Farm Fresh" },
+                      { img: farm4, text: "Growing Strong" },
+                      { img: farm5, text: "Fresh Harvest" },
                     ].map((item, index) => (
                       <motion.div
                         key={index}
                         whileHover={{ scale: 1.002 }}
                         transition={{ duration: 0.3 }}
-                        className="relative h-64 rounded-2xl overflow-hidden shadow-lg cursor-pointer group"
+                        className="relative h-56 rounded-2xl overflow-hidden shadow-lg cursor-pointer group"
                       >
                         <img
                           src={item.img}

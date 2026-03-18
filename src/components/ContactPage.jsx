@@ -21,6 +21,7 @@ import logoFull from "../assets/images/logo-512x512.png"; //logo-full-h768.png";
 import background from "../assets/images/background2.png";
 
 import man from "../assets/images/man.jpg";
+import contact from "../assets/images/contact.jpg";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -149,7 +150,6 @@ export default function ContactPage({
               // }}
             >
               {/* First Section */}
-              
 
               {/* --- Contact Header & Quick Contact --- */}
               <div className="w-full bg-theme text-white py-20 rounded-b-[40px] text-center px-6">
@@ -236,6 +236,7 @@ export default function ContactPage({
                     <button className="w-full bg-theme text-white font-bold py-4 rounded-xl flex items-center justify-center gap-3 hover:bg-green-700 transition cursor-pointer">
                       <FontAwesomeIcon icon={faPaperPlane} /> Send Message
                     </button>
+                    <p className="text-xs  leading-tight"> <FontAwesomeIcon icon={faCheck} /> Your information is secure and will never be shared with third parties.</p>
                   </form>
                 </div>
 
@@ -243,87 +244,7 @@ export default function ContactPage({
                 <div className="space-y-6">
                   <div className="relative rounded-3xl overflow-hidden shadow-2xl h-64">
                     <img
-                      src={man}
-                      alt="Support"
-                      className="w-full h-full object-cover"
-                    />
-                    <div className="absolute top-4 right-4 bg-orange-400 text-white p-3 rounded-xl text-center">
-                      <p className="text-xs font-bold leading-tight">
-                        24/7
-                        <br />
-                        Available
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="bg-white p-6 rounded-2xl shadow-md border border-gray-100 flex items-center gap-4">
-                    <div className="bg-theme w-10 h-10 rounded-full flex items-center justify-center text-white">
-                      <FontAwesomeIcon icon={faLocationDot} />
-                    </div>
-                    <div>
-                      <p className="text-xs font-bold text-gray-400">
-                        Office Location
-                      </p>
-                      <p className="font-bold">United States 🇺🇸</p>
-                    </div>
-                  </div>
-
-                  <div className="bg-white p-6 rounded-2xl shadow-md border border-gray-100 flex items-center gap-4">
-                    <div className="bg-orange-500 w-10 h-10 rounded-full flex items-center justify-center text-white">
-                      <FontAwesomeIcon icon={faClock} />
-                    </div>
-                    <div>
-                      <p className="text-xs font-bold text-gray-400">
-                        Working Hours
-                      </p>
-                      <p className="font-bold">
-                        Monday - Friday, 9:00 AM - 6:00 PM EST
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* --- Contact Form Section --- */}
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto py-24 px-6 items-center">
-                {/* Left: Form */}
-                <div className="bg-white p-10 rounded-3xl shadow-xl border border-gray-100">
-                  <span className="text-orange-500 text-xs font-bold uppercase tracking-widest mb-2 block">
-                    • Send Message
-                  </span>
-                  <h3 className="text-3xl font-bold mb-8">Drop Us a Line</h3>
-                  <form className="space-y-6">
-                    <div>
-                      <label className="block text-sm font-bold mb-2">
-                        Full Name <span className="text-red-500">*</span>
-                      </label>
-                      <input
-                        type="text"
-                        placeholder="Enter your full name"
-                        className="w-full bg-gray-50 border border-gray-200 rounded-xl p-4 text-sm focus:outline-none focus:border-theme"
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-sm font-bold mb-2">
-                        Email Address <span className="text-red-500">*</span>
-                      </label>
-                      <input
-                        type="email"
-                        placeholder="youremail@example.com"
-                        className="w-full bg-gray-50 border border-gray-200 rounded-xl p-4 text-sm focus:outline-none focus:border-theme"
-                      />
-                    </div>
-                    <button className="w-full bg-theme text-white font-bold py-4 rounded-xl flex items-center justify-center gap-3 hover:bg-green-700 transition cursor-pointer">
-                      <FontAwesomeIcon icon={faPaperPlane} /> Send Message
-                    </button>
-                  </form>
-                </div>
-
-                {/* Right: Info Cards */}
-                <div className="space-y-6">
-                  <div className="relative rounded-3xl overflow-hidden shadow-2xl h-64">
-                    <img
-                      src={man}
+                      src={contact}
                       alt="Support"
                       className="w-full h-full object-cover"
                     />

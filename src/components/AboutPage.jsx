@@ -54,6 +54,8 @@ import {
   faMap,
   faMobileAlt,
   faUserPlus,
+  faChevronDown,
+  faQuestionCircle,
 } from "@fortawesome/free-solid-svg-icons";
 
 import NotificationModal from "./modals/NotificationModal.jsx";
@@ -122,6 +124,40 @@ export default function AboutPage({
     // alert("");
     navigate("/" + path);
   };
+
+  // Track which FAQ index is open (-1 means all closed)
+  const [activeIndex, setActiveIndex] = useState(null);
+
+  const toggleAccordion = (index) => {
+    setActiveIndex(activeIndex === index ? null : index);
+  };
+
+  const faqData = [
+    {
+      q: "When do I get paid?",
+      a: "Once the buyer confirms delivery and verifies the 6-digit escrow code, funds are released instantly to your wallet. You can withdraw to your bank account within 1-3 business days.",
+    },
+    {
+      q: "What fees do you charge?",
+      isSpecial: true, // Marker for the table layout
+    },
+    {
+      q: "How does escrow protect me?",
+      a: "Escrow.com holds the buyer's payment securely until delivery is confirmed. This guarantees you get paid—no chargebacks, no fraudulent disputes. You control when funds are released by sharing the 6-digit code with the buyer.",
+    },
+    {
+      q: "How long does onboarding take?",
+      a: "Most farmers complete registration in under 5 minutes. After submitting your application, we typically approve within 24 hours. Once approved, you can list products and start receiving orders immediately.",
+    },
+    {
+      q: "What is the approval timeline?",
+      a: "We review and approve applications within 24-48 hours (typically 24 hours for complete submissions).",
+    },
+    {
+      q: "What if I'm new to online selling?",
+      a: "No problem! We provide free onboarding support to all new farmers. You'll get a dedicated setup guide, tips for taking great product photos, and access to our farmer community for advice.",
+    },
+  ];
 
   return (
     <div>
@@ -628,10 +664,7 @@ export default function AboutPage({
                     <FontAwesomeIcon icon={faUserPlus} className="text-lg" />
                     Join Farmers
                   </button>
-
-                  |
-
-                  {/* Join Button */}
+                  |{/* Join Button */}
                   <button
                     // whileHover={{ scale: 1.05 }}
                     // whileTap={{ scale: 0.95 }}
@@ -641,9 +674,155 @@ export default function AboutPage({
                     Browse Market
                     <FontAwesomeIcon icon={faArrowRight} className="text-lg" />
                   </button>
-
                 </div>
               </motion.div>
+
+              {/* --- Farmer FAQ Section --- */}
+              <div className="flex flex-col items-center py-16 px-6 bg-white">
+                {/* Top Badge */}
+                <div className="flex gap-2 items-center my-2 rounded-4xl bg-softerTheme px-6 py-2 w-max mx-auto mb-6">
+                  <FontAwesomeIcon
+                    icon={faQuestionCircle}
+                    className="text-theme"
+                  />
+                  <span className="text-sm font-bold text-theme leading-none">
+                    FREQUENTLY ASKED QUESTIONS
+                  </span>
+                </div>
+
+                <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-12 text-center">
+                  Questions Farmers Ask Us
+                </h2>
+
+                <div className="w-full max-w-4xl space-y-4">
+                  {faqData.map((item, index) => (
+                    <div
+                      key={index}
+                      className="border border-gray-200 rounded-xl overflow-hidden shadow-sm"
+                    >
+                      {/* Header / Trigger */}
+                      <button
+                        onClick={() => toggleAccordion(index)}
+                        className="w-full bg-gray-50/50 p-5 flex justify-between items-center cursor-pointer transition-colors hover:bg-gray-100"
+                      >
+                        <h3 className="font-bold text-gray-800 text-left">
+                          {item.q}
+                        </h3>
+                        <motion.div
+                          animate={{ rotate: activeIndex === index ? 180 : 0 }}
+                          transition={{ duration: 0.3 }}
+                        >
+                          <FontAwesomeIcon
+                            icon={faChevronDown}
+                            className="text-theme text-xs"
+                          />
+                        </motion.div>
+                      </button>
+
+                      {/* Dropdown Content */}
+                      <AnimatePresence>
+                        {activeIndex === index && (
+                          <motion.div
+                            initial={{ height: 0, opacity: 0 }}
+                            animate={{ height: "auto", opacity: 1 }}
+                            exit={{ height: 0, opacity: 0 }}
+                            transition={{ duration: 0.3, ease: "easeInOut" }}
+                          >
+                            <div className="p-6 bg-white border-t border-gray-100">
+                              {item.isSpecial ? (
+                                /* Special Layout for Fees Section */
+                                <div className="space-y-4">
+                                  <p className="text-gray-600 text-sm italic">
+                                    Zero upfront fees. We only earn when you
+                                    sell. No listing fees, no monthly fees, no
+                                    hidden costs.
+                                  </p>
+                                  <div className="bg-green-50/50 border border-green-100 rounded-xl p-5">
+                                    <h4 className="text-theme font-bold text-sm flex items-center gap-2 mb-3">
+                                      <span className="text-lg font-bold">
+                                        %
+                                      </span>{" "}
+                                      Fee Breakdown:
+                                    </h4>
+                                    <ul className="text-sm space-y-2 text-gray-700 font-medium list-disc list-inside marker:text-theme">
+                                      <li>Platform fee: 8% of sale price</li>
+                                      <li>
+                                        Payment processing: ~2.9% + $0.30 (via
+                                        Stripe/PayPal)
+                                      </li>
+                                      <li>
+                                        Escrow.com: ~3.25% (deducted from total)
+                                      </li>
+                                    </ul>
+                                  </div>
+                                  <p className="text-[11px] text-gray-500 leading-tight">
+                                    Farmers net up to 92% after our 8% fee on
+                                    successful sales—total retention varies by
+                                    payment method (e.g., ~86-89% net).
+                                  </p>
+                                  {/* Table */}
+                                  <div className="overflow-x-auto rounded-lg border border-gray-100">
+                                    <table className="w-full text-left text-xs">
+                                      <thead className="bg-gray-50 text-gray-600 uppercase font-bold">
+                                        <tr>
+                                          <th className="p-3 border-r border-gray-100">
+                                            Sale Price
+                                          </th>
+                                          <th className="p-3 border-r border-gray-100">
+                                            Platform Fee (8%)
+                                          </th>
+                                          <th className="p-3 border-r border-gray-100">
+                                            Processing
+                                          </th>
+                                          <th className="p-3 border-r border-gray-100">
+                                            Escrow
+                                          </th>
+                                          <th className="p-3">Farmer Nets</th>
+                                        </tr>
+                                      </thead>
+                                      <tbody className="text-gray-700 font-medium">
+                                        <tr className="border-t border-gray-100">
+                                          <td className="p-3 border-r border-gray-100">
+                                            $100
+                                          </td>
+                                          <td className="p-3 border-r border-gray-100 text-red-500">
+                                            -$8
+                                          </td>
+                                          <td className="p-3 border-r border-gray-100 text-red-500">
+                                            -$3.20
+                                          </td>
+                                          <td className="p-3 border-r border-gray-100 text-red-500">
+                                            -$3.25
+                                          </td>
+                                          <td className="p-3 font-bold text-theme">
+                                            ~$85.55
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                  </div>
+                                </div>
+                              ) : (
+                                /* Standard Text Answer */
+                                <p className="text-gray-600 text-sm leading-relaxed">
+                                  {item.a}
+                                </p>
+                              )}
+                            </div>
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
+                    </div>
+                  ))}
+                </div>
+
+                <p className="mt-12 text-sm text-gray-500 font-medium">
+                  Still have questions?{" "}
+                  <span className="text-theme cursor-pointer font-bold hover:underline">
+                    Email our farmer support team
+                  </span>
+                </p>
+              </div>
             </div>
           </div>
         </div>

@@ -169,7 +169,7 @@ export default function GuestMobileNavbar({
       >
         <MenuContent className="">
           <div className="">
-            <div className="flex justify-between items-center pl-4 pr-8  bg-gradient-to-r from-white to-white shadow-lg h-[80px]">
+            <div className="flex justify-between items-center pl-4 pr-8  bg-linear-to-r from-white to-white shadow-lg h-[80px]">
               <div className=" mt-0 flex items-center bg-white p-0.5 rounded-full">
                 <img
                   className="block h-16 w-auto max-w-none"
@@ -200,6 +200,20 @@ export default function GuestMobileNavbar({
                 }}
               >
                 Home
+              </motion.span>
+
+              {/* <hr className=" border-gray-300" /> */}
+
+              <motion.span
+                variants={menuItemVariants}
+                initial="hidden"
+                animate={isMenuOpen ? "visible" : "hidden"}
+                className="text-md text-theme cursor-pointer block py-3 px-8 hover:bg-theme hover:text-white rounded-lg "
+                onClick={() => {
+                  gotoPage("market");
+                }}
+              >
+                Market
               </motion.span>
 
               {/* <hr className=" border-gray-300" /> */}

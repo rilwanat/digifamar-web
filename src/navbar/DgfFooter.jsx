@@ -170,6 +170,15 @@ function DgfFooter({ gotoPage }) {
             </p>
             <p
               onClick={() => {
+                navigate("/market");
+              }}
+              className="text-white text-sm mb-2 cursor-pointer hover:text-softTheme"
+              style={{ color: "" }}
+            >
+              Market
+            </p>
+            <p
+              onClick={() => {
                 navigate("/about-us");
               }}
               className="text-white text-sm mb-2 cursor-pointer hover:text-softTheme"

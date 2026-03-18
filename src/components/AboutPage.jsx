@@ -678,7 +678,7 @@ export default function AboutPage({
               </motion.div>
 
               {/* --- Farmer FAQ Section --- */}
-              <div className="flex flex-col items-center py-16 px-6 bg-white">
+              <div className="flex flex-col items-center py-16 px-6 ">
                 {/* Top Badge */}
                 <div className="flex gap-2 items-center my-2 rounded-4xl bg-softerTheme px-6 py-2 w-max mx-auto mb-6">
                   <FontAwesomeIcon
@@ -698,7 +698,7 @@ export default function AboutPage({
                   {faqData.map((item, index) => (
                     <div
                       key={index}
-                      className="border border-gray-200 rounded-xl overflow-hidden shadow-sm"
+                      className="border border-gray-200 rounded-xl overflow-hidden shadow-sm bg-white"
                     >
                       {/* Header / Trigger */}
                       <button
@@ -818,7 +818,10 @@ export default function AboutPage({
 
                 <p className="mt-12 text-sm text-gray-500 font-medium">
                   Still have questions?{" "}
-                  <span className="text-theme cursor-pointer font-bold hover:underline">
+                  <span className="text-theme cursor-pointer font-bold hover:underline" 
+                  onClick={() => {
+                    window.location.href = "mailto:support@digifamar.com";
+                  }}>
                     Email our farmer support team
                   </span>
                 </p>

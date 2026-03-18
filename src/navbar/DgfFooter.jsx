@@ -123,7 +123,7 @@ function DgfFooter({ gotoPage }) {
               hover:text-softTheme hover:bg-theme
               "
                 onClick={() => {
-                  // window.location.href = "mailto:info@.com";
+                  window.location.href = "mailto:support@digifamar.com";
                 }}
               >
                 Email: support@digifamar.com
@@ -143,7 +143,7 @@ function DgfFooter({ gotoPage }) {
               hover:text-softTheme hover:bg-theme
               "
                 onClick={() => {
-                  // window.location.href = "mailto:info@.com";
+                  // window.location.href = "mailto:support@digifamar.com";
                 }}
               >
                 Website: www.digifamar.com

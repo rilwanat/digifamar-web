@@ -199,7 +199,7 @@ export default function JoinFarmersPage({
               </div>
 
               {/* --- Section 3: Why Choose DiGiFaMaR™ (Benefits Grid) --- */}
-              <div className="max-w-7xl mx-auto px-6 mb-32">
+              <div className="max-w-7xl mx-auto px-6 mb-20">
                 <div className="text-center mb-16">
                   <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">
                     Why Farmers Choose Our Marketplace
@@ -245,7 +245,7 @@ export default function JoinFarmersPage({
               </div>
 
               {/* --- Section 4: Three-Step Process --- */}
-              <div className="w-full bg-gray-50 py-24 px-6 rounded-[3rem] mb-32">
+              <div className="w-full bg-gray-50 py-10 px-6 rounded-[3rem] mb-20">
                 <div className="max-w-7xl mx-auto">
                   <div className="text-center mb-16">
                     <h2 className="text-3xl font-extrabold text-gray-900">

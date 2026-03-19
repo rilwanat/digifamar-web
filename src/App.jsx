@@ -5,6 +5,8 @@ import { useState, useEffect } from "react";
 import HomePage from "./components/HomePage.jsx";
 import AboutPage from "./components/AboutPage.jsx";
 import MarketPage from "./components/MarketPage.jsx";
+import JoinFarmersPage from "./components/JoinFarmersPage.jsx";
+import PressPage from "./components/PressPage.jsx";
 import ContactPage from "./components/ContactPage.jsx";
 
 
@@ -136,6 +138,8 @@ function App() {
             <Route path="/" element={<HomePage isMobile={isMobile}  userDetails={userDetails} refreshUserDetails={refreshUserDetails}/>} />
             <Route path="/market" element={<MarketPage isMobile={isMobile}  userDetails={userDetails} refreshUserDetails={refreshUserDetails}/>} />
             <Route path="/about-us" element={<AboutPage isMobile={isMobile}  userDetails={userDetails} refreshUserDetails={refreshUserDetails}/>} />
+            <Route path="/join-farmers" element={<JoinFarmersPage isMobile={isMobile}  userDetails={userDetails} refreshUserDetails={refreshUserDetails}/>} />
+            <Route path="/press" element={<PressPage isMobile={isMobile}  userDetails={userDetails} refreshUserDetails={refreshUserDetails}/>} />
             <Route path="/contact-us" element={<ContactPage isMobile={isMobile}  userDetails={userDetails} refreshUserDetails={refreshUserDetails}/>} />
             
 

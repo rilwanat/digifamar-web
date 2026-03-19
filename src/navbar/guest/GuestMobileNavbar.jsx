@@ -238,6 +238,34 @@ export default function GuestMobileNavbar({
                 animate={isMenuOpen ? "visible" : "hidden"}
                 className="text-md text-theme cursor-pointer block py-3 px-8 hover:bg-theme hover:text-white rounded-lg "
                 onClick={() => {
+                  gotoPage("join-farmers");
+                }}
+              >
+                Join Farmers
+              </motion.span>
+
+              {/* <hr className=" border-gray-300" /> */}
+
+              <motion.span
+                variants={menuItemVariants}
+                initial="hidden"
+                animate={isMenuOpen ? "visible" : "hidden"}
+                className="text-md text-theme cursor-pointer block py-3 px-8 hover:bg-theme hover:text-white rounded-lg "
+                onClick={() => {
+                  gotoPage("press");
+                }}
+              >
+                Press
+              </motion.span>
+
+              {/* <hr className=" border-gray-300" /> */}
+
+              <motion.span
+                variants={menuItemVariants}
+                initial="hidden"
+                animate={isMenuOpen ? "visible" : "hidden"}
+                className="text-md text-theme cursor-pointer block py-3 px-8 hover:bg-theme hover:text-white rounded-lg "
+                onClick={() => {
                   gotoPage("contact-us");
                 }}
               >

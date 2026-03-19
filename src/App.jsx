@@ -10,6 +10,9 @@ import PressPage from "./components/PressPage.jsx";
 import ContactPage from "./components/ContactPage.jsx";
 
 
+
+import LoginSelecPage from "./components/LoginSelecPage.jsx";
+
 import LoginUserPage from "./components/LoginUserPage.jsx";
 import CreateUserWithEmailPage from "./components/CreateUserWithEmailPage.jsx";
 import UserVerifyEmailPage from "./components/user/UserVerifyEmailPage.jsx";
@@ -142,6 +145,10 @@ function App() {
             <Route path="/press" element={<PressPage isMobile={isMobile}  userDetails={userDetails} refreshUserDetails={refreshUserDetails}/>} />
             <Route path="/contact-us" element={<ContactPage isMobile={isMobile}  userDetails={userDetails} refreshUserDetails={refreshUserDetails}/>} />
             
+            
+
+<Route path="/login" element={<LoginSelecPage isMobile={isMobile} />} />
+
 
 <Route path="/user-login" element={<LoginUserPage isMobile={isMobile} />} />
             <Route path="/create-user-with-email" element={<CreateUserWithEmailPage isMobile={isMobile} />} />

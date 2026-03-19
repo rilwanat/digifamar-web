@@ -47,6 +47,7 @@ import {
   faMap,
   faUserPlus,
   // faGooglePlay,
+  faBell, faPaperPlane, faCheckCircle
 } from "@fortawesome/free-solid-svg-icons";
 
 import NotificationModal from "./modals/NotificationModal";
@@ -1273,6 +1274,66 @@ export default function HomePage({
                   </div>
                 </div>
               </motion.div>
+
+              {/* Subscribe Section */}
+              <div className=" bg-theme py-16 px-6 text-white text-center -mb-4   relative left-1/2 right-1/2 -mx-[50vw] w-screen">
+                <div className="max-w-4xl mx-auto flex flex-col items-center">
+                  {/* Header with Bell Icon */}
+                  <div className="flex items-center justify-center gap-3 mb-4">
+                    <FontAwesomeIcon
+                      icon={faBell}
+                      className="text-2xl animate-pulse"
+                    />
+                    <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight">
+                      Subscribe to Updates
+                    </h2>
+                  </div>
+
+                  {/* Subtext */}
+                  <p className="text-white/90 text-lg mb-10 font-medium">
+                    Get farming tips, market insights, and DiGiFaMaR™ updates
+                    delivered straight to your inbox!
+                  </p>
+
+                  {/* Form Container */}
+                  <div className="flex flex-col sm:flex-row items-center gap-4 w-full max-w-2xl mb-8">
+                    <input
+                      type="email"
+                      placeholder="Enter your email address"
+                      className="w-full bg-white/10 border border-white/30 rounded-xl px-6 py-4 text-white placeholder:text-white/60 focus:outline-none focus:ring-2 focus:ring-white/50 transition-all"
+                    />
+                    <motion.button
+                      // whileHover={{ scale: 1.05 }}
+                      // whileTap={{ scale: 0.95 }}
+                      className="w-full sm:w-auto bg-white text-theme px-8 py-4 rounded-xl font-bold flex items-center justify-center gap-3 shadow-xl 
+                      hover:text-orange  transition-all cursor-pointer whitespace-nowrap"
+                    >
+                      <FontAwesomeIcon
+                        icon={faPaperPlane}
+                        className="text-sm"
+                      />
+                      Subscribe
+                    </motion.button>
+                  </div>
+
+                  {/* Footer Benefits */}
+                  <div className="flex flex-wrap justify-center gap-6 text-sm font-semibold opacity-90">
+                    {["No spam", "Weekly digest", "Unsubscribe anytime"].map(
+                      (text, index) => (
+                        <div key={index} className="flex items-center gap-2">
+                          <FontAwesomeIcon
+                            icon={faCheckCircle}
+                            className="text-white/70 text-xs"
+                          />
+                          <span>{text}</span>
+                        </div>
+                      ),
+                    )}
+                  </div>
+                </div>
+              </div>
+
+
             </div>
           </div>
         </div>
